@@ -19,7 +19,7 @@
 #include "non_copyable.h"
 #include "ui_checkbox.h"
 #include "ui_label_button.h"
-#include "ui_radiobutton.h"
+#include "ui_radio_button.h"
 
 namespace OHOS {
 namespace ACELite {
