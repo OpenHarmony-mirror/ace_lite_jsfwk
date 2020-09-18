@@ -27,7 +27,7 @@ export const ObserverStack = {
 
 export const SYMBOL_OBSERVABLE = '__ob__';
 
-export const canObserve = target => typeof target === 'object';
+export const canObserve = target => typeof target === 'object' && target !== null;
 
 export const defineProp = (target, key, value) => {
   Object.defineProperty(target, key, { enumerable: false, value });
