@@ -208,7 +208,7 @@ describe('ViewModel', () => {
 
     vm.address.splice(0, 1, 'ShenZhen');
   });
-  test('12_observed_array_splice', (done) => {
+  test('12_observed_array_reverse', (done) => {
     const vm = new ViewModel({
       data: {
         address: ['BeiJing', 'HangZhou'],
