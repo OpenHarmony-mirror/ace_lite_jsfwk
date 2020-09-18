@@ -27,7 +27,7 @@ describe('ViewModel', () => {
     const as2 = new ViewModel({
       data() {
         return { count: 2 };
-      },
+      }
     });
     expect(as1.count).toBe(1);
     expect(as2.count).toBe(2);
@@ -42,7 +42,7 @@ describe('ViewModel', () => {
       },
       decrease() {
         --this.count;
-      },
+      }
     });
     expect(typeof vm.increase).toBe('function');
     expect(typeof vm.decrease).toBe('function');
@@ -51,9 +51,9 @@ describe('ViewModel', () => {
     vm.decrease();
     expect(vm.count).toBe(1);
   });
-  test('04_watch_basic_usage', (done) => {
+  test('04_watch_basic_usage', done => {
     const vm = new ViewModel({
-      data: function () {
+      data: function() {
         return { count: 1 };
       },
       increase() {
@@ -61,149 +61,149 @@ describe('ViewModel', () => {
       },
       decrease() {
         --this.count;
-      },
+      }
     });
     expect(vm.count).toBe(1);
     const watcher = vm.$watch(
-      () => vm.count,
-      (value) => {
-        expect(value).toBe(2);
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.count,
+        value => {
+          expect(value).toBe(2);
+          watcher.unsubscribe();
+          done();
+        }
     );
     vm.increase();
   });
-  test('05_watch_nested_object', (done) => {
+  test('05_watch_nested_object', done => {
     const vm = new ViewModel({
-      data: function () {
+      data: function() {
         return { user: { name: 'Chen' } };
       },
 
       setName(name) {
         this.user.name = name;
-      },
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.user.name,
-      (name) => {
-        expect(name).toBe('Chen2');
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.user.name,
+        name => {
+          expect(name).toBe('Chen2');
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.setName('Chen2');
   });
-  test('06_watch_array', (done) => {
+  test('06_watch_array', done => {
     const vm = new ViewModel({
-      data: function () {
+      data: function() {
         return { cities: ['HangZhou'] };
       },
       add(city) {
         this.cities.push(city);
-      },
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.cities,
-      (value) => {
-        expect(value.length).toBe(2);
-        expect(value[1]).toBe('ShenZhen');
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.cities,
+        value => {
+          expect(value.length).toBe(2);
+          expect(value[1]).toBe('ShenZhen');
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.add('ShenZhen');
   });
-  test('07_observed_array_push', (done) => {
+  test('07_observed_array_push', done => {
     const vm = new ViewModel({
       data: {
-        address: [],
-      },
+        address: []
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.address[0],
-      (value) => {
-        expect(value).toBe('BeiJing');
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.address[0],
+        value => {
+          expect(value).toBe('BeiJing');
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.address.push('BeiJing');
   });
-  test('08_observed_array_pop', (done) => {
+  test('08_observed_array_pop', done => {
     const vm = new ViewModel({
       data: {
-        address: ['HangZhou', 'BeiJing'],
-      },
+        address: ['HangZhou', 'BeiJing']
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.address[1],
-      (value) => {
-        expect(value).toBeUndefined();
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.address[1],
+        value => {
+          expect(value).toBeUndefined();
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.address.pop();
   });
-  test('09_observed_array_unshift', (done) => {
+  test('09_observed_array_unshift', done => {
     const vm = new ViewModel({
       data: {
-        address: [],
-      },
+        address: []
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.address[0],
-      (value) => {
-        expect(value).toBe('HangZhou');
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.address[0],
+        value => {
+          expect(value).toBe('HangZhou');
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.address.unshift('HangZhou');
   });
-  test('10_observed_array_shift', (done) => {
+  test('10_observed_array_shift', done => {
     const vm = new ViewModel({
       data: {
-        address: ['BeiJing', 'HangZhou'],
-      },
+        address: ['BeiJing', 'HangZhou']
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.address[0],
-      (value) => {
-        expect(value).toBe('HangZhou');
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.address[0],
+        value => {
+          expect(value).toBe('HangZhou');
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.address.shift();
   });
-  test('11_observed_array_splice', (done) => {
+  test('11_observed_array_splice', done => {
     const vm = new ViewModel({
       data: {
-        address: ['BeiJing', 'HangZhou'],
-      },
+        address: ['BeiJing', 'HangZhou']
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.address[0],
-      (value) => {
-        expect(value).toBe('ShenZhen');
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.address[0],
+        value => {
+          expect(value).toBe('ShenZhen');
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.address.splice(0, 1, 'ShenZhen');
@@ -211,111 +211,111 @@ describe('ViewModel', () => {
   test('12_observed_array_reverse', (done) => {
     const vm = new ViewModel({
       data: {
-        address: ['BeiJing', 'HangZhou'],
-      },
+        address: ['BeiJing', 'HangZhou']
+      }
     });
 
     vm.$watch(
-      () => vm.address[0],
-      (value) => {
-        expect(value).toBe('HangZhou');
-        done();
-      }
+        () => vm.address[0],
+        value => {
+          expect(value).toBe('HangZhou');
+          done();
+        }
     );
 
     vm.address.reverse();
   });
-  test('13_watch_multidimensional_array', (done) => {
+  test('13_watch_multidimensional_array', done => {
     const vm = new ViewModel({
-      data: function () {
+      data: function() {
         return {
           numbers: [
             [0, 0, 0, 2],
             [0, 0, 0, 0],
             [0, 0, 0, 0],
-            [0, 0, 0, 0],
-          ],
+            [0, 0, 0, 0]
+          ]
         };
-      },
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.numbers[0][0],
-      (value) => {
-        expect(value).toBe(4);
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.numbers[0][0],
+        value => {
+          expect(value).toBe(4);
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.numbers[0].splice(0, 1, 4);
   });
-  test('14_watch_multidimensional_array', (done) => {
+  test('14_watch_multidimensional_array', done => {
     const vm = new ViewModel({
-      data: function () {
+      data: function() {
         return {
           numbers: [
             [0, 0, 0, 2],
             [0, 0, 0, 0],
             [0, 0, 0, 0],
-            [0, 0, 0, 0],
-          ],
+            [0, 0, 0, 0]
+          ]
         };
-      },
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.numbers[0][0],
-      (value) => {
-        expect(value).toBe(4);
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.numbers[0][0],
+        value => {
+          expect(value).toBe(4);
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.numbers.splice(0, 1, [4, 4, 4, 4]);
   });
-  test('15_change_array_by_index', (done) => {
+  test('15_change_array_by_index', done => {
     const vm = new ViewModel({
       data: {
-        users: ['Jack', 'Mike'],
-      },
+        users: ['Jack', 'Mike']
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.users[0],
-      (value) => {
-        expect(value).toBe('Enzo');
-        watcher.unsubscribe();
-        done();
-      }
+        () => vm.users[0],
+        value => {
+          expect(value).toBe('Enzo');
+          watcher.unsubscribe();
+          done();
+        }
     );
 
     vm.users[0] = 'Enzo';
   });
-  test('15_watch_object_array', (done) => {
+  test('15_watch_object_array', done => {
     const vm = new ViewModel({
       data: {
-        users: [],
-      },
+        users: []
+      }
     });
 
     const watcher = vm.$watch(
-      () => vm.users[0],
-      (user) => {
-        expect(user.name).toEqual('Jack');
-        watcher.unsubscribe();
-      }
+        () => vm.users[0],
+        user => {
+          expect(user.name).toEqual('Jack');
+          watcher.unsubscribe();
+        }
     );
     vm.users.push({ name: 'Jack' });
 
     const watcher2 = vm.$watch(
-      () => vm.users[0] && vm.users[0].name,
-      (name) => {
-        expect(name).toEqual('Enzo');
-        watcher2.unsubscribe();
-        done();
-      }
+        () => vm.users[0] && vm.users[0].name,
+        name => {
+          expect(name).toEqual('Enzo');
+          watcher2.unsubscribe();
+          done();
+        }
     );
 
     vm.users[0].name = 'Enzo';
@@ -332,7 +332,7 @@ describe('ViewModel', () => {
       onReady,
       onShow,
       onDestroy,
-      onDataChange,
+      onDataChange
     });
 
     expect(vm.onInit()).toBe('onInit');

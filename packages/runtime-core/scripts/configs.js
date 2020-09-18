@@ -52,7 +52,7 @@ module.exports = [
       strip({ functions: ['startTracing', 'stopTracing'] }),
       nodeResolve({ extensions }),
       commonjs(),
-      babel({ exclude, extensions }),
+      babel({ exclude, extensions })
     ],
     output: [
       {
@@ -60,16 +60,16 @@ module.exports = [
         banner,
         format,
         file: 'build/framework.js',
-        plugins: beautifyPlugins,
+        plugins: beautifyPlugins
       },
       {
         name,
         banner,
         format,
         file: 'build/framework.min.js',
-        plugins: minimizePlugins,
-      },
-    ],
+        plugins: minimizePlugins
+      }
+    ]
   },
   {
     input,
@@ -77,7 +77,7 @@ module.exports = [
       eslint({ fix: true }),
       nodeResolve({ extensions }),
       commonjs(),
-      babel({ exclude, extensions }),
+      babel({ exclude, extensions })
     ],
     output: [
       {
@@ -85,15 +85,15 @@ module.exports = [
         banner,
         format,
         file: 'build/framework-dev.js',
-        plugins: beautifyPlugins,
+        plugins: beautifyPlugins
       },
       {
         name,
         banner,
         format,
         file: 'build/framework-dev.min.js',
-        plugins: minimizePlugins,
-      },
-    ],
-  },
+        plugins: minimizePlugins
+      }
+    ]
+  }
 ];
