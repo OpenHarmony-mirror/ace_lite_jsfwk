@@ -118,7 +118,7 @@ function hijackArray(target) {
       let inserted;
       if (ObservedMethods.PUSH === key || ObservedMethods.UNSHIFT === key) {
         inserted = args;
-      } else if (ObservedMethods.SPLICE) {
+      } else if (ObservedMethods.SPLICE === key) {
         inserted = args.slice(2);
       }
 
