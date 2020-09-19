@@ -129,7 +129,7 @@ JSIValue DfxModule::DumpDomNode(const JSIValue thisVal, const JSIValue *args, ui
         return JSI::CreateUndefined();
     }
     JSIValue retVal = JSI::CreateString(msg);
-    free(msg); // use heap memory, use free() instead of ace_free()
+    cJSON_free(msg); // use cjson malloc memory, use cJSON_free() instead of ace_free()
     JSI::ReleaseString(viewId);
     return retVal;
 }
