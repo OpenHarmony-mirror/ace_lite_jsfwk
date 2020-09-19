@@ -152,6 +152,7 @@ public:
             video_->UpdatePlayState(VideoPlayState::STATE_STOPPED);
         }
         video_->SetCurrentPlayTimeText(progress);
+        video_->PanelRefreshLayout();
         // call js registered on seeking function
         if (!jerry_value_is_function(playSeekingFunc_)) {
             return;
@@ -182,6 +183,7 @@ public:
         int64_t playPosition = progressValue * PanelView::MILLIONS_PER_SECOND;
         if (video_->SeekTo(playPosition) == 0) {
             video_->SetCurrentPlayTimeText(progressValue);
+            video_->PanelRefreshLayout();
             Media::Player* videoPlayer = const_cast<Media::Player *>(video_->GetPlayer());
             if (videoPlayer != nullptr && videoPlayer->IsPlaying()) {
                 // when slider clicked && videoPlayer is playing, notify UpdateProgressHandler start update

@@ -218,6 +218,11 @@ void TextComponent::PostUpdate(uint16_t attrKeyId, bool updateResult)
         default:
             break;
     }
+    UIView *parent = uiLabel_->GetParent();
+    if (parent != nullptr) {
+        parent->LayoutChildren();
+        parent->Invalidate();
+    }
 }
 
 void TextComponent::SetTextAlign(UILabel &label, const AppStyleItem *styleItem) const
