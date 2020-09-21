@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     'arrow-parens': ['error', 'as-needed'],
     'object-curly-spacing': ['error', 'always'],
-    'comma-dangle': ['error', 'never']
+    'comma-dangle': ['error', 'never'],
+    'max-len': ['error', { code: 120 }]
   }
 };
