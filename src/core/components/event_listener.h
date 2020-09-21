@@ -66,7 +66,7 @@ public:
         if (value_ != nullptr) {
             const char * const valueName = "value";
             jerry_value_t valueProp = jerry_create_string(reinterpret_cast<jerry_char_t *>(value_));
-            ReleaseJerryValue(jerryx_set_property_str(args[0], valueName, valueProp), valueProp);
+            ReleaseJerryValue(jerryx_set_property_str(args[0], valueName, valueProp), valueProp, VA_ARG_END_FLAG);
         }
         jerry_value_t globalObject = jerry_get_global_object();
         jerry_value_t appViewModel = jerryx_get_property_str(globalObject, ATTR_APP);
