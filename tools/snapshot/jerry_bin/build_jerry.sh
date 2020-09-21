@@ -12,6 +12,23 @@
 #See the License for the specific language governing permissions and
 #limitations under the License.
 
-python ../../../../../external/jerryscript/tools/build.py --mem-heap=16 --snapshot-exec=ON --snapshot-save=ON --profile=es5.1 --error-messages=ON --logging=ON --mem-stats=ON --jerry-cmdline-snapshot=ON
-cp ../../../../../external/jerryscript/build/bin/jerry ./linux/
-cp ../../../../../external/jerryscript/build/bin/jerry-snapshot ./linux/
+# step 1: clone jerryscript repo
+git clone git@gitee.com:openharmony/third_party_jerryscript.git jerryscript
+
+# step 2: reset the commit to the 2.1.0 tag
+pushd ./jerryscript
+git reset --hard e8bc7a2b93a6edfa463458c8bb69fac2a36feb9e
+
+# step 3: compile jerry
+python tools/build.py --mem-heap=48 --snapshot-exec=ON --snapshot-save=ON \
+        --profile=es5.1 --error-messages=ON --logging=ON --mem-stats=ON \
+        --jerry-cmdline-snapshot=ON
+
+# step 4: copy jerry-snapshot excutable
+popd
+mkdir linux
+cp ./jerryscript/build/bin/jerry ./linux/
+cp ./jerryscript/build/bin/jerry-snapshot ./linux/
+
+echo "snapshot tool generated done."
+echo "useage: jerry-snapshot generate -o xxx.bc xxx.js"
