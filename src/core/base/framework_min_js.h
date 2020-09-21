@@ -47,13 +47,13 @@ const char * const g_frameworkJSBuffer =
     "ion(t){void 0!==t&&this._obsMap&&this._obsMap[t]&&this._obsMap[t].forEach((function(t){ret"
     "urn t.update()}))},o.prototype.setParent=function(t,e){this._parent=t,this._key=e},o.proto"
     "type.notifyParent=function(){this._parent&&this._parent.notify(this._key)};var r={PUSH:'pu"
-    "sh',POP:'pop',UNSHIFT:'unshift',SHIFT:'shift',SPLICE:'splice',REVERSE:'reverse'},s=Object."
-    "keys(r).map((function(t){return r[t]}));function c(t){if(!(this instanceof c))return new c"
-    "(t);var e=this._vm=this;'[object Object]'===Object.prototype.toString.call(t)&&Object.keys"
-    "(t).forEach((function(n){var i=t[n];'render'===n?e.$render=i:'data'===n?function(t,e){'fun"
-    "ction'==typeof e&&(e=e.call(t,t));Object.keys(e).forEach((function(n){return function(t,e,"
-    "n){Object.defineProperty(t,n,{enumerable:!1,configurable:!0,get:function(){return e[n]},se"
-    "t:function(t){e[n]=t}})}(t,e,n)})),o.of(e)}(e,i):'styleSheet'===n?initStyleSheet(i):'funct"
-    "ion'==typeof i&&(e[n]=i.bind(e))}))}return c.prototype.$watch=function(t,e,n){return new i"
-    "(this,t,e,n)},c}));";
+    "sh',POP:'pop',UNSHIFT:'unshift',SHIFT:'shift',SORT:'sort',SPLICE:'splice',REVERSE:'reverse"
+    "'},s=Object.keys(r).map((function(t){return r[t]}));function c(t){if(!(this instanceof c))"
+    "return new c(t);var e=this._vm=this;'[object Object]'===Object.prototype.toString.call(t)&"
+    "&Object.keys(t).forEach((function(n){var i=t[n];'render'===n?e.$render=i:'data'===n?functi"
+    "on(t,e){'function'==typeof e&&(e=e.call(t,t));Object.keys(e).forEach((function(n){return f"
+    "unction(t,e,n){Object.defineProperty(t,n,{enumerable:!1,configurable:!0,get:function(){ret"
+    "urn e[n]},set:function(t){e[n]=t}})}(t,e,n)})),o.of(e)}(e,i):'styleSheet'===n?initStyleShe"
+    "et(i):'function'==typeof i&&(e[n]=i.bind(e))}))}return c.prototype.$watch=function(t,e,n){"
+    "return new i(this,t,e,n)},c}));";
 #endif

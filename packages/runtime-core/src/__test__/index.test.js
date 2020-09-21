@@ -320,6 +320,22 @@ describe('ViewModel', () => {
 
     vm.users[0].name = 'Enzo';
   });
+  test('16_observed_array_sort', done => {
+    const vm = new ViewModel({
+      data: {
+        numbers: [4, 1, 9, 2]
+      }
+    });
+    const watcher = vm.$watch(
+        () => vm.numbers[0],
+        number => {
+          expect(number).toEqual(1);
+          watcher.unsubscribe();
+          done();
+        }
+    );
+    vm.numbers.sort();
+  });
   test('99_lifecycle', () => {
     const onInit = jest.fn().mockReturnValue('onInit');
     const onReady = jest.fn().mockReturnValue('onReady');
