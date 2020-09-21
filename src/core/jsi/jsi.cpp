@@ -1057,5 +1057,34 @@ bool JSI::DefineNamedProperty(JSIValue object, const char * const propNameStr, J
     return false;
 #endif
 }
+
+void JSI::FailCallback(const JSIValue thisVal, const JSIValue args, int32_t errCode, const char * const errDesc)
+{
+    if(ValueIsUndefined(args)) {
+        return;
+    }
+    JSIValue fail = GetNamedProperty(args, CB_FAIL);
+    JSIValue complete = GetNamedProperty(args, CB_COMPLETE);
+    JSIValue errInfo = CreateString(errDesc);
+    JSIValue retCode = CreateNumber(errCode);
+    JSIValue argv[ARGC_TWO] = {errInfo, retCode};
+
+    CallFunction(fail, thisVal, argv, ARGC_TWO);
+    CallFunction(complete, thisVal, nullptr, 0);
+    ReleaseValueList(errInfo, retCode, fail, complete);
+}
+
+void JSI::SuccessCallback(const JSIValue thisVal, const JSIValue args, const JSIValue *argv, uint8_t argc)
+{
+    if(ValueIsUndefined(args)) {
+        return;
+    }
+    JSIValue success = GetNamedProperty(args, CB_SUCCESS);
+    JSIValue complete = GetNamedProperty(args, CB_COMPLETE);
+
+    CallFunction(success, thisVal, argv, argc);
+    CallFunction(complete, thisVal, nullptr, 0);
+    ReleaseValueList(success, complete);
+}
 } // namespace ACELite
 } // namespace OHOS
