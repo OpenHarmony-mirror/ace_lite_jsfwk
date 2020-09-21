@@ -1060,7 +1060,7 @@ bool JSI::DefineNamedProperty(JSIValue object, const char * const propNameStr, J
 
 void JSI::FailCallback(const JSIValue thisVal, const JSIValue args, int32_t errCode, const char * const errDesc)
 {
-    if(ValueIsUndefined(args)) {
+    if (ValueIsUndefined(args)) {
         return;
     }
     JSIValue fail = GetNamedProperty(args, CB_FAIL);
@@ -1076,7 +1076,7 @@ void JSI::FailCallback(const JSIValue thisVal, const JSIValue args, int32_t errC
 
 void JSI::SuccessCallback(const JSIValue thisVal, const JSIValue args, const JSIValue *argv, uint8_t argc)
 {
-    if(ValueIsUndefined(args)) {
+    if (ValueIsUndefined(args)) {
         return;
     }
     JSIValue success = GetNamedProperty(args, CB_SUCCESS);
