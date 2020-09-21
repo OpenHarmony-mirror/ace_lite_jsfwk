@@ -140,12 +140,9 @@ bool InputComponent::SetPrivateAttribute(uint16_t attrKeyId, jerry_value_t attrV
             }
             break;
         case K_VALUE:
-            if (button_ != nullptr) {
-                ACE_FREE(textValue_);
-                textValue_ = MallocStringOf(attrValue);
-                return true;
-            }
-            break;
+            ACE_FREE(textValue_);
+            textValue_ = MallocStringOf(attrValue);
+            return true;
         case K_NAME:
             if (radioButton_ != nullptr) {
                 char *name = MallocStringOf(attrValue);
@@ -474,6 +471,7 @@ void InputComponent::DealEvent()
         return;
     }
     if (changeListener_ != nullptr) {
+            changeListener_->SetValue(textValue_);
             if (checkbox_ != nullptr) {
                 checkbox_->SetOnChangeListener(changeListener_);
             } else {
@@ -531,6 +529,10 @@ void InputComponent::PostUpdate(uint16_t attrKeyId, bool updateResult)
             default:
                 break;
         }
+    }
+    if (((checkbox_ != nullptr) || (radioButton_ != nullptr)) && (changeListener_ != nullptr)
+            && (attrKeyId == K_VALUE)) {
+        changeListener_->SetValue(textValue_);
     }
 }
 } // namespace ACELite
