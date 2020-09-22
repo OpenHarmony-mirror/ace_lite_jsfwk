@@ -13,6 +13,8 @@
 # limitations under the License.
 
 import os
+import getopt
+import sys
 
 HMF_ACE_BASE_PATH = os.path.join("..", "..")
 FRAMEWORK_SNAPSHOT_FILE_PATH = os.path.join(
@@ -90,7 +92,6 @@ def convert_bc():
             output.write("#endif")
 
 
-
 def convert_js():
     with open(FRAMEWORK_JS_FILE_PATH, 'r') as input_file:
         javascript_buffer = input_file.read()
@@ -125,6 +126,28 @@ def convert_js():
             output.write("#endif")
 
 
+def usage():
+    print("  > use default input path: python framework2char.py")
+    print("  > use specific input path: "
+          "python framework2char.py -b xxx/framework.min.bc -j xxx/framework.min.js")
+    print("    > -b : the input snapshot file")
+    print("    > -j : the input javascript file")
+
+
 if __name__ == '__main__':
-    convert_js()
-    convert_bc()
+    opts, args = getopt.getopt(
+        sys.argv[1:], '-h-b-j:', ['help', 'bc=', 'js='])
+    for o, a in opts:
+        if o in ("-h", "--help"):
+            usage()
+            sys.exit()
+        if o in ("-b", "--bc"):
+            FRAMEWORK_SNAPSHOT_FILE_PATH = a
+        if 0 in ("-j", "--js"):
+            FRAMEWORK_JS_FILE_PATH = a
+    if (os.path.exists(os.path.abspath(FRAMEWORK_SNAPSHOT_FILE_PATH))
+        and os.path.exists(os.path.abspath(FRAMEWORK_JS_FILE_PATH))):
+        convert_js()
+        convert_bc()
+    else:
+        print("[Error]: framwork.min.bc and framework.min.js must be prepared")
