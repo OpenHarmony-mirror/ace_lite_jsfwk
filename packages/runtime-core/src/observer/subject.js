@@ -93,6 +93,7 @@ const ObservedMethods = {
   POP: 'pop',
   UNSHIFT: 'unshift',
   SHIFT: 'shift',
+  SORT: 'sort',
   SPLICE: 'splice',
   REVERSE: 'reverse'
 };
