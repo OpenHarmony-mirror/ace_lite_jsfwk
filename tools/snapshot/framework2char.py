@@ -143,7 +143,7 @@ if __name__ == '__main__':
             sys.exit()
         if o in ("-b", "--bc"):
             FRAMEWORK_SNAPSHOT_FILE_PATH = a
-        if 0 in ("-j", "--js"):
+        if o in ("-j", "--js"):
             FRAMEWORK_JS_FILE_PATH = a
     if (os.path.exists(os.path.abspath(FRAMEWORK_SNAPSHOT_FILE_PATH))
         and os.path.exists(os.path.abspath(FRAMEWORK_JS_FILE_PATH))):
