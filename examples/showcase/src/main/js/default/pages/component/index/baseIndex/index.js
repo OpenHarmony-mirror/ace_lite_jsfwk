@@ -12,13 +12,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/index/index"),
+  ...backPage("pages/index/index"),
   changeImage: routePage("pages/component/image/index/index").changePage,
   changeProgress: routePage("pages/component/progress/index/index").changePage,
   changeText: routePage("pages/component/text/index/index").changePage,
   changeMarquee: routePage("pages/component/marquee/index/index").changePage,
   changeChart: routePage("pages/component/chart/index/index").changePage,
   changeCanvas: routePage("pages/component/canvas/index/index").changePage
-}
+};

@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/image/index/index"),
-    changePage1: routePage("pages/component/image/image2/image2").changePage
-}
+  ...backPage("pages/component/image/index/index"),
+  changePage1: routePage("pages/component/image/image2/image2").changePage
+};

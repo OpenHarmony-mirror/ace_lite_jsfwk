@@ -13,29 +13,36 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-  <stack style="left:0px;right:0px;width:454px;height:454px;">
-    <list style="left:0px;right:0px;width:454px;height:454px;flex-direction:column">
-      <list-item style="width:454px;height:60px;">
-      </list-item>
-      <list-item style="width:454px;height:100px;">
-          <input type="button" style="margin-left:85px;width:130px;height:60px;" value="返回首页" onclick=backMain>
-          </input>
-          <input type="button" style="margin-left:20px;width:130px;height:60px;" value="返回上级" onclick=backSuperior>
-          </input>
-      </list-item>
-      <list-item class="separatorContainerStyle">
-      </list-item>
-      <list-item style="width:454px;height:100px;">
-        <input type="button" style="width:180px;height:60px;margin-left:135px;" value="文本选择器" onclick=changeTextPicker>
-        </input>
-      </list-item>
-      <list-item class="separatorContainerStyle">
-      </list-item>
-      <list-item style="width:454px;height:100px;">
-        <input type="button" style="width:180px;height:60px;margin-left:135px;" value="时间选择器" onclick=changeTimePicker>
-        </input>
-      </list-item>
-      <list-item style="width:454px;height:40px;">
-      </list-item>
-    </list>
-  </stack>
+<stack style="left: 0px; right: 0px; width: 454px; height: 454px">
+  <list style="left: 0px; right: 0px; width: 454px; height: 454px; flex-direction: column">
+    <list-item style="width: 454px; height: 60px"> </list-item>
+    <list-item style="width: 454px; height: 100px">
+      <input type="button" style="margin-left: 85px; width: 130px; height: 60px" value="返回首页" onclick="backMain" />
+      <input
+        type="button"
+        style="margin-left: 20px; width: 130px; height: 60px"
+        value="返回上级"
+        onclick="backSuperior"
+      />
+    </list-item>
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454px; height: 100px">
+      <input
+        type="button"
+        style="width: 180px; height: 60px; margin-left: 135px"
+        value="文本选择器"
+        onclick="changeTextPicker"
+      />
+    </list-item>
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454px; height: 100px">
+      <input
+        type="button"
+        style="width: 180px; height: 60px; margin-left: 135px"
+        value="时间选择器"
+        onclick="changeTimePicker"
+      />
+    </list-item>
+    <list-item style="width: 454px; height: 40px"> </list-item>
+  </list>
+</stack>

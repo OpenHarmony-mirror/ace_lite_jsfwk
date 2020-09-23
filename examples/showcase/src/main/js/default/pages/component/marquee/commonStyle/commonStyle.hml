@@ -14,20 +14,10 @@ limitations under the License.
 -->
 
 <list class="list">
-  <list-item style="height:60px;width:454px;"> </list-item>
+  <list-item style="height: 60px; width: 454px"> </list-item>
   <list-item class="item-title">
-    <input
-      type="button"
-      style="margin-left:85px;width:130px;height:60px;"
-      onclick="goHome"
-      value="首页"
-    />
-    <input
-      type="button"
-      style="margin-left:20px;width:130px;height:60px;"
-      onclick="goPrevious"
-      value="上一页"
-    />
+    <input type="button" style="margin-left: 85px; width: 130px; height: 60px" onclick="goHome" value="首页" />
+    <input type="button" style="margin-left: 20px; width: 130px; height: 60px" onclick="goPrevious" value="上一页" />
   </list-item>
   <list-item class="separatorContainerStyle"> </list-item>
   <list-item class="item-types">
@@ -36,12 +26,12 @@ limitations under the License.
   <list-item class="separatorContainerStyle"> </list-item>
   <list-item class="item-three">
     <div class="three-div">
-      <div class="three-left-div" style="margin-left:30px;width:160px;">
+      <div class="three-left-div" style="margin-left: 30px; width: 160px">
         <text class="text">背景红色</text>
         <text class="text">left为50</text>
         <text class="text">top为50</text>
       </div>
-      <stack class="general-stack" style="margin-left:0px;width:200px;height:150px;">
+      <stack class="general-stack" style="margin-left: 0px; width: 200px; height: 150px">
         <marquee class="general-text">show-text</marquee>
       </stack>
     </div>
@@ -49,46 +39,39 @@ limitations under the License.
   <list-item class="separatorContainerStyle"> </list-item>
   <list-item class="item-three">
     <div class="three-div">
-      <div class="three-left-div" style="margin-left:30px;">
+      <div class="three-left-div" style="margin-left: 30px">
         <text class="text">margin为40</text>
         <text class="text">height为60</text>
         <text class="text">width为100</text>
       </div>
-      <div
-        class="three-right-div"
-        style="background-color:springgreen;width:160px;"
-      >
-        <marquee style="margin:40px;width:100px;height:60px;background-color:red"
-          >show-text</marquee
-        >
+      <div class="three-right-div" style="background-color: springgreen; width: 160px">
+        <marquee style="margin: 40px; width: 100px; height: 60px; background-color: red">show-text</marquee>
       </div>
     </div>
   </list-item>
   <list-item class="separatorContainerStyle"> </list-item>
   <list-item class="item-two">
     <div class="two-div">
-      <div class="two-left-div" style="margin-left:30px;">
+      <div class="two-left-div" style="margin-left: 30px">
         <text class="text">border</text>
         <text class="text">padding</text>
       </div>
-      <div class="right-div" style="background-color:springgreen;width:160px;">
-        <marquee class="show" style="width:120px;">show-text</marquee>
+      <div class="right-div" style="background-color: springgreen; width: 160px">
+        <marquee class="show" style="width: 120px">show-text</marquee>
       </div>
     </div>
   </list-item>
   <list-item class="separatorContainerStyle"> </list-item>
   <list-item class="item-two">
     <div class="two-div">
-      <div class="two-left-div" style="margin-left:30px;" onclick="changeDisplay">
+      <div class="two-left-div" style="margin-left: 30px" onclick="changeDisplay">
         <text class="text">display</text>
-        <text class="text">{{displayVal}}</text>
+        <text class="text">{{ displayVal }}</text>
       </div>
-      <div class="right-div" style="background-color:springgreen;width:160px;">
-        <marquee class="show" style="width:120px;display:{{displayVal}}"
-          >display val is flex</marquee
-        >
+      <div class="right-div" style="background-color: springgreen; width: 160px">
+        <marquee class="show" style="width:120px;display:{{ displayVal }}">display val is flex</marquee>
       </div>
     </div>
   </list-item>
-  <list-item style="height:80px;width:454px;"> </list-item>
+  <list-item style="height: 80px; width: 454px"> </list-item>
 </list>

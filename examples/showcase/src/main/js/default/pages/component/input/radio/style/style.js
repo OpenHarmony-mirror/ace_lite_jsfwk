@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage, routePage} from "../../../../../common/js/general";
+import { goPage, routePage } from "../../../../../common/js/general";
 export default {
-    ...goPage("pages/component/input/radio/index/index")
-}
+  ...goPage("pages/component/input/radio/index/index")
+};

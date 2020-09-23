@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/index/index"),
+  ...backPage("pages/index/index"),
   changeInput: routePage("pages/component/input/index/index").changePage,
   changeSlider: routePage("pages/component/slider/index/index").changePage,
   changeSwitch: routePage("pages/component/switch/index/index").changePage,
   changePickerView: routePage("pages/component/picker_view/index/index").changePage
-}
+};

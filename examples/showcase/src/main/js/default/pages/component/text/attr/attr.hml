@@ -13,55 +13,42 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <list class = "list">
-        <list-item style="height:60px;width:454px;">
-        </list-item>
-        <list-item class= "item-title">
-                <input type = "button" style="margin-left:85px;width:130px;height:60px;" onclick = "goHome" value = "首页"/>
-                <input type = "button" style="margin-left:20px;width:130px;height:60px;" onclick = "goPrevious" value = "上一页"/>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class = "item-types">
-            <text class = "whole-text">通用属性</text>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class ="item-attribute">
-            <div class = "attribute-div">
-                <input type="button" class = "text" style="margin-left:30px;" onclick=changeShow value="show"></input>
-            </div>
-            <div class = "attribute-div-if-text">
-                <text show="{{showStatus}}" style="width:200px;height:50px;">
-                  显示文字
-                </text>
-            </div>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class ="item-attribute">
-            <div class = "attribute-div">
-                <input type="button" class = "text" style="margin-left:30px;" onclick="changeStatusIf" value="if"></input>
-            </div>
-            <div class = "attribute-div-if-text">
-                <text if="{{ifStatus}}" style="width:200px;height:50px;">
-                显示文字
-                </text>
-            </div>
-
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class ="item-attribute">
-            <div class = "attribute-div">
-                <input type="button" class = "text" style="margin-left:30px;" value="for"></input>
-            </div>
-            <div class = "attribute-div-if-text">
-                <text style="width:200px;height:50px;" for="{{textfor}}">
-                {{$idx}} -- {{$item}}
-                </text>
-            </div>
-        </list-item>
-        <list-item style="height:60px;width:454px;">
-        </list-item>
-    </list>
+<list class="list">
+  <list-item style="height: 60px; width: 454px"> </list-item>
+  <list-item class="item-title">
+    <input type="button" style="margin-left: 85px; width: 130px; height: 60px" onclick="goHome" value="首页" />
+    <input type="button" style="margin-left: 20px; width: 130px; height: 60px" onclick="goPrevious" value="上一页" />
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-types">
+    <text class="whole-text">通用属性</text>
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-attribute">
+    <div class="attribute-div">
+      <input type="button" class="text" style="margin-left: 30px" onclick="changeShow" value="show" />
+    </div>
+    <div class="attribute-div-if-text">
+      <text show="{{ showStatus }}" style="width: 200px; height: 50px"> 显示文字 </text>
+    </div>
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-attribute">
+    <div class="attribute-div">
+      <input type="button" class="text" style="margin-left: 30px" onclick="changeStatusIf" value="if" />
+    </div>
+    <div class="attribute-div-if-text">
+      <text if="{{ ifStatus }}" style="width: 200px; height: 50px"> 显示文字 </text>
+    </div>
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-attribute">
+    <div class="attribute-div">
+      <input type="button" class="text" style="margin-left: 30px" value="for" />
+    </div>
+    <div class="attribute-div-if-text">
+      <text style="width: 200px; height: 50px" for="{{ textfor }}"> {{ $idx }} -- {{ $item }} </text>
+    </div>
+  </list-item>
+  <list-item style="height: 60px; width: 454px"> </list-item>
+</list>

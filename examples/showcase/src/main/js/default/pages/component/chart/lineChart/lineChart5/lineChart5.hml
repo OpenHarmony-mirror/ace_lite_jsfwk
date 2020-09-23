@@ -13,13 +13,16 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <div style="width:454px;height:454px;left:0px;top:0px;flex-direction:column;" >
-        <stack style="width:454px;height:80px;margin-top:80px;">
-          <input type="button" style="left:85px;width:130px;height:60px;" value="首页" onclick=backMain>
-          </input>
-          <input type="button" style="left:235px;width:130px;height:60px;" value="上一页" onclick=backSuperior>
-          </input>
-        </stack>
-        <chart type="line" datasets="{{datasets}}" options="{{options}}" style="width:280px;height:230px;margin-top:10px;margin-left:85px;">
-        </chart>
-    </div>
+<div style="width: 454px; height: 454px; left: 0px; top: 0px; flex-direction: column">
+  <stack style="width: 454px; height: 80px; margin-top: 80px">
+    <input type="button" style="left: 85px; width: 130px; height: 60px" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235px; width: 130px; height: 60px" value="上一页" onclick="backSuperior" />
+  </stack>
+  <chart
+    type="line"
+    datasets="{{ datasets }}"
+    options="{{ options }}"
+    style="width: 280px; height: 230px; margin-top: 10px; margin-left: 85px"
+  >
+  </chart>
+</div>

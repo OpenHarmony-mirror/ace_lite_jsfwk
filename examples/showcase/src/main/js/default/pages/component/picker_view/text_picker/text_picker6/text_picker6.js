@@ -12,13 +12,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
-import {changeStatus} from "../../../../../common/js/picker_view";
+import { backPage, routePage } from "../../../../../common/js/general";
+import { changeStatus } from "../../../../../common/js/picker_view";
 export default {
-    data: {
-        textContent: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
-        status: true
-    },
-    changeStatus: changeStatus,
-    ...backPage("pages/component/picker_view/text_picker/indexAttr/index")
-}
+  data: {
+    textContent: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"],
+    status: true
+  },
+  changeStatus: changeStatus,
+  ...backPage("pages/component/picker_view/text_picker/indexAttr/index")
+};

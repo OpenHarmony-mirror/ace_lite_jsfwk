@@ -12,10 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    ...backPage("pages/component/chart/lineChart/index/index"),
-    changePage1: routePage("pages/component/chart/lineChart/lineChart2/lineChart2").changePage,
-    changePage2: routePage("pages/component/chart/lineChart/lineChart3/lineChart3").changePage,
-    changePage3: routePage("pages/component/chart/lineChart/lineChart4/lineChart4").changePage
-}
+  ...backPage("pages/component/chart/lineChart/index/index"),
+  changePage1: routePage("pages/component/chart/lineChart/lineChart2/lineChart2").changePage,
+  changePage2: routePage("pages/component/chart/lineChart/lineChart3/lineChart3").changePage,
+  changePage3: routePage("pages/component/chart/lineChart/lineChart4/lineChart4").changePage
+};

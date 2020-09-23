@@ -12,17 +12,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        text1: ""
-    },
-    ...backPage("pages/component/list/list-item/indexEvent/index"),
-    changePage1: routePage("pages/component/list/list-item/item1/item1").changePage,
-    clickFunc: function () {
-        this.text1 = "点击事件被触发";
-    },
-    longPressFunc: function () {
-        this.text1 = "长按事件被触发";
-    }
-}
+  data: {
+    text1: ""
+  },
+  ...backPage("pages/component/list/list-item/indexEvent/index"),
+  changePage1: routePage("pages/component/list/list-item/item1/item1").changePage,
+  clickFunc: function() {
+    this.text1 = "点击事件被触发";
+  },
+  longPressFunc: function() {
+    this.text1 = "长按事件被触发";
+  }
+};

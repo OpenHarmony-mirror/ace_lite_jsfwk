@@ -12,14 +12,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage} from "../../../../common/js/general";
-import {changeStatus} from "../../../../common/js/image";
+import { backPage } from "../../../../common/js/general";
+import { changeStatus } from "../../../../common/js/image";
 export default {
-    data: {
-        text1: "点击按钮改变状态",
-        status: true,
-        div01: "div01"
-    },
-    ...backPage("pages/component/image/indexAttr/index"),
-    changeStatus: changeStatus
-}
+  data: {
+    text1: "点击按钮改变状态",
+    status: true,
+    div01: "div01"
+  },
+  ...backPage("pages/component/image/indexAttr/index"),
+  changeStatus: changeStatus
+};

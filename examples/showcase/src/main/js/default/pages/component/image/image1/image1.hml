@@ -15,10 +15,8 @@ limitations under the License.
 
     <div style="height:454px;width:454px;flex-direction:column;" >
         <stack style="width:454px;height:80px;margin-top:80px;">
-          <input type="button" style="left:85px;width:130px;height:60px;" value="首页" onclick=backMain>
-          </input>
-          <input type="button" style="left:235px;width:130px;height:60px;" value="上一页" onclick=backSuperior>
-          </input>
+          <input type="button" style="left:85px;width:130px;height:60px;" value="首页" onclick=backMain/>
+          <input type="button" style="left:235px;width:130px;height:60px;" value="上一页" onclick=backSuperior/>
         </stack>
         <image src="common/leftHead.png" style="margin-top:10px;margin-left:160px;height:100px;width:100px;"/>
         <text style="margin-top:10px;margin-left:100px;width:260px;height:40px;">

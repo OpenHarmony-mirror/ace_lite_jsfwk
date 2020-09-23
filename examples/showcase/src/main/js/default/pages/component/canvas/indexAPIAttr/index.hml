@@ -13,68 +13,51 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<stack style="left:0;right:0;width:454;height:454;">
-  <list style="left:0;right:0;width:454;height:454;flex-direction:column">
-    <list-item style="width:454;height:60;">
+<stack style="left: 0; right: 0; width: 454; height: 454">
+  <list style="left: 0; right: 0; width: 454; height: 454; flex-direction: column">
+    <list-item style="width: 454; height: 60"> </list-item>
+    <list-item style="width: 454; height: 80">
+      <input type="button" style="margin-left: 85; width: 130; height: 60" value="返回首页" onclick="backMain" />
+      <input type="button" style="margin-left: 20; width: 130; height: 60" value="返回上级" onclick="backSuperior" />
     </list-item>
-    <list-item style="width:454;height:80;">
-        <input type="button" style="margin-left:85;width:130;height:60;" value="返回首页" onclick=backMain>
-        </input>
-        <input type="button" style="margin-left:20;width:130;height:60;" value="返回上级" onclick=backSuperior>
-        </input>
-    </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
+    <list-item class="separatorContainerStyle"> </list-item>
     <list-item class="titleContainerStyle">
-        <text class="titleTextStyle">
-        canvas属性接口
-        </text>
+      <text class="titleTextStyle"> canvas属性接口 </text>
     </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
-    <list-item style="width:454;height:170;">
-      <canvas id="cvs1" ref="canvas1" style="margin-left:45;width:200;height:150;background-color:#ffff00">
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454; height: 170">
+      <canvas id="cvs1" ref="canvas1" style="margin-left: 45; width: 200; height: 150; background-color: #ffff00">
       </canvas>
-      <input type="button" style="margin-left:10;width:180;height:60;" value="fillStyle" onclick=fillStyleFunc>
-      </input>
+      <input type="button" style="margin-left: 10; width: 180; height: 60" value="fillStyle" onclick="fillStyleFunc" />
     </list-item>
-    <list-item class="separatorContainerStyle">
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454; height: 170">
+      <canvas ref="canvas2" style="margin-left: 45; width: 200; height: 150; background-color: #ffff00"> </canvas>
+      <input
+        type="button"
+        style="margin-left: 10; width: 180; height: 60"
+        value="strokeStyle"
+        onclick="strokeStyleFunc"
+      />
     </list-item>
-    <list-item style="width:454;height:170;">
-      <canvas ref="canvas2" style="margin-left:45;width:200;height:150;background-color:#ffff00">
-      </canvas>
-      <input type="button" style="margin-left:10;width:180;height:60;" value="strokeStyle" onclick=strokeStyleFunc>
-      </input>
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454; height: 170">
+      <canvas ref="canvas3" style="margin-left: 45; width: 200; height: 150; background-color: #ffff00"> </canvas>
+      <input type="button" style="margin-left: 10; width: 180; height: 60" value="lineWidth" onclick="lineWidthFunc" />
     </list-item>
-    <list-item class="separatorContainerStyle">
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454; height: 170">
+      <canvas ref="canvas4" style="margin-left: 45; width: 200; height: 150; background-color: #ffff00"> </canvas>
+      <input type="button" style="margin-left: 10; width: 180; height: 60" value="font" onclick="fontFunc" />
     </list-item>
-    <list-item style="width:454;height:170;">
-      <canvas ref="canvas3" style="margin-left:45;width:200;height:150;background-color:#ffff00">
-      </canvas>
-      <input type="button" style="margin-left:10;width:180;height:60;" value="lineWidth" onclick=lineWidthFunc>
-      </input>
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454; height: 170">
+      <canvas ref="canvas5" style="margin-left: 45; width: 200; height: 150; background-color: #ffff00"> </canvas>
+      <input type="button" style="margin-left: 10; width: 180; height: 60" value="textAlign" onclick="textAlignFunc" />
     </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
-    <list-item style="width:454;height:170;">
-      <canvas ref="canvas4" style="margin-left:45;width:200;height:150;background-color:#ffff00">
-      </canvas>
-      <input type="button" style="margin-left:10;width:180;height:60;" value="font" onclick=fontFunc>
-      </input>
-    </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
-    <list-item style="width:454;height:170;">
-      <canvas ref="canvas5" style="margin-left:45;width:200;height:150;background-color:#ffff00">
-      </canvas>
-      <input type="button" style="margin-left:10;width:180;height:60;" value="textAlign" onclick=textAlignFunc>
-      </input>
-    </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
-    <list-item style="width:454;height:170;">
-      <input type="button" style="margin-left:10;width:180;height:60;" value="jump" onclick=jumpFunc>
-      </input>
+    <list-item class="separatorContainerStyle"> </list-item>
+    <list-item style="width: 454; height: 170">
+      <input type="button" style="margin-left: 10; width: 180; height: 60" value="jump" onclick="jumpFunc" />
     </list-item>
   </list>
 </stack>

@@ -15,5 +15,5 @@
 // animation2.js
 import { backPage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/animation/index1/index")
-}
+  ...backPage("pages/component/animation/index1/index")
+};

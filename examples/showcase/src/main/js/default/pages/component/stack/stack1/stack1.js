@@ -12,21 +12,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        text1: "点击事件未触发",
-        text2: "长按事件未触发",
-        text3: "swipe事件未触发",
-    },
-    ...backPage("pages/component/stack/indexEvent/index"),
-    clickFunc: function () {
-        this.text1 = "点击事件已触发";
-    },
-    longpressFunc: function () {
-        this.text2 = "长按事件已触发";
-    },
-    stackswipe: function (e) {
-        this.text3 = "swipe方向：" + e.direction;
-    }
-}
+  data: {
+    text1: "点击事件未触发",
+    text2: "长按事件未触发",
+    text3: "swipe事件未触发"
+  },
+  ...backPage("pages/component/stack/indexEvent/index"),
+  clickFunc: function() {
+    this.text1 = "点击事件已触发";
+  },
+  longpressFunc: function() {
+    this.text2 = "长按事件已触发";
+  },
+  stackswipe: function(e) {
+    this.text3 = "swipe方向：" + e.direction;
+  }
+};

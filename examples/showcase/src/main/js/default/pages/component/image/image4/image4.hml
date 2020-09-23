@@ -13,48 +13,34 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <div style="height:454px;width:454px;flex-direction:column;" >
-        <stack style="width:454px;height:80px;margin-top:80px;">
-          <input type="button" style="left:85px;width:130px;height:60px;" value="首页" onclick=backMain>
-          </input>
-          <input type="button" style="left:235px;width:130px;height:60px;" value="上一页" onclick=backSuperior>
-          </input>
-        </stack>
-        <div style="height:150px;width:454px;justify-content:center" >
-            <div class="div1" style="align-items:flex-start;">
-                <image class="image" style="margin-top:20px;margin-left:20px;" src="common/leftHead.png">
-                </image>
-            </div>
-            <div class="div1" style="justify-content:flex-end;align-items:flex-end;">
-                <image class="image" style="margin-right:20px;margin-bottom:20px;" src="common/leftHead.png">
-                </image>
-            </div>
-        </div>
-        <list style="margin-left:85px; width: 280px; height: 170px;" >
-            <list-item class="item">
-                <text class="text">
-                    宽100px;高50px
-                </text>
-            </list-item>
-            <list-item class="item">
-                <text class="text">
-                    左图左边距100px
-                </text>
-            </list-item>
-            <list-item class="item">
-                <text class="text">
-                    左图上边距20px
-                </text>
-            </list-item>
-            <list-item class="item">
-                <text class="text">
-                    右图右边距20px
-                </text>
-            </list-item>
-            <list-item class="item">
-                <text class="text">
-                    右图下边距20px
-                </text>
-            </list-item>
-        </list>
+<div style="height: 454px; width: 454px; flex-direction: column">
+  <stack style="width: 454px; height: 80px; margin-top: 80px">
+    <input type="button" style="left: 85px; width: 130px; height: 60px" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235px; width: 130px; height: 60px" value="上一页" onclick="backSuperior" />
+  </stack>
+  <div style="height: 150px; width: 454px; justify-content: center">
+    <div class="div1" style="align-items: flex-start">
+      <image class="image" style="margin-top: 20px; margin-left: 20px" src="common/leftHead.png"> </image>
     </div>
+    <div class="div1" style="justify-content: flex-end; align-items: flex-end">
+      <image class="image" style="margin-right: 20px; margin-bottom: 20px" src="common/leftHead.png"> </image>
+    </div>
+  </div>
+  <list style="margin-left: 85px; width: 280px; height: 170px">
+    <list-item class="item">
+      <text class="text"> 宽100px;高50px </text>
+    </list-item>
+    <list-item class="item">
+      <text class="text"> 左图左边距100px </text>
+    </list-item>
+    <list-item class="item">
+      <text class="text"> 左图上边距20px </text>
+    </list-item>
+    <list-item class="item">
+      <text class="text"> 右图右边距20px </text>
+    </list-item>
+    <list-item class="item">
+      <text class="text"> 右图下边距20px </text>
+    </list-item>
+  </list>
+</div>

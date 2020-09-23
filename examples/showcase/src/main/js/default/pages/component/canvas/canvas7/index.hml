@@ -13,22 +13,32 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div style="height:450;width:450;flex-direction:column;border-width:1;border-color:#ff0000" >
-    <stack style="width:454;height:80;margin-top:80;border-width:1;border-color:#0000ff">
-      <input type="button" style="left:85;width:130;height:60;" value="首页" onclick=backMain>
-      </input>
-      <input type="button" style="left:235;width:130;height:60;" value="上一页" onclick=backSuperior>
-      </input>
-    </stack>
-    <canvas style="width:280;height:60;margin-left:40;margin-top:15;margin-right:10;margin-bottom:20;background-color:#00ff00;border-width:1;border-color:#ffa500">
-    </canvas>
-    <text class="text" style="margin-left:40;width:320;">
-      {{text1}}
-    </text>
-    <text class="text" style="margin-left:40;width:320;">
-      {{text2}}
-    </text>
-    <text class="text" style="margin-left:40;width:320;">
-      {{text3}}
-    </text>
+<div style="height: 450; width: 450; flex-direction: column; border-width: 1; border-color: #ff0000">
+  <stack style="width: 454; height: 80; margin-top: 80; border-width: 1; border-color: #0000ff">
+    <input type="button" style="left: 85; width: 130; height: 60" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235; width: 130; height: 60" value="上一页" onclick="backSuperior" />
+  </stack>
+  <canvas
+    style="
+      width: 280;
+      height: 60;
+      margin-left: 40;
+      margin-top: 15;
+      margin-right: 10;
+      margin-bottom: 20;
+      background-color: #00ff00;
+      border-width: 1;
+      border-color: #ffa500;
+    "
+  >
+  </canvas>
+  <text class="text" style="margin-left: 40; width: 320">
+    {{ text1 }}
+  </text>
+  <text class="text" style="margin-left: 40; width: 320">
+    {{ text2 }}
+  </text>
+  <text class="text" style="margin-left: 40; width: 320">
+    {{ text3 }}
+  </text>
 </div>

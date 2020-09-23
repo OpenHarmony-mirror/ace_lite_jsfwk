@@ -36,11 +36,11 @@
 }
 
 .whole-text {
-  margin-top:10px;
-  margin-left:150px;
-  width:200px;
-  height:60px;
-  font-size:30px;
+  margin-top: 10px;
+  margin-left: 150px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
   color: red;
 }
 
@@ -79,15 +79,15 @@
 }
 
 .general-item {
-  width:130px;
-  height:130px;
-  center-x:50px;
-  center-y:50px;
-  radius:50px;
-  start-angle:0;
-  total-angle:120;
-  left:20px;
-  top:20px;
+  width: 130px;
+  height: 130px;
+  center-x: 50px;
+  center-y: 50px;
+  radius: 50px;
+  start-angle: 0;
+  total-angle: 120;
+  left: 20px;
+  top: 20px;
   background-color: #ff0000;
   stroke-width: 16px;
 }
@@ -97,31 +97,31 @@
   height: 50px;
   margin-top: 10px;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .margin-show {
   margin: 20px;
   width: 70px;
   height: 70px;
-  center-x:35px;
-  center-y:35px;
-  start-angle:0;
-  total-angle:360;
-  radius:35px;
+  center-x: 35px;
+  center-y: 35px;
+  start-angle: 0;
+  total-angle: 360;
+  radius: 35px;
   stroke-width: 5px;
 }
 
 .border-show {
   border-width: 5px;
   border-color: #0000ff;
-  border-radius:5px;
-  padding:10px;
-  center-x:65px;
-  center-y:65px;
-  start-angle:0;
-  total-angle:360;
-  radius:50px;
+  border-radius: 5px;
+  padding: 10px;
+  center-x: 65px;
+  center-y: 65px;
+  start-angle: 0;
+  total-angle: 360;
+  radius: 50px;
   width: 130px;
   height: 130px;
   margin-top: 10px;
@@ -130,11 +130,11 @@
 }
 
 .special-style {
-  center-x:50px;
-  center-y:50px;
-  start-angle:10;
-  total-angle:180;
-  radius:50px;
+  center-x: 50px;
+  center-y: 50px;
+  start-angle: 10;
+  total-angle: 180;
+  radius: 50px;
   width: 100px;
   height: 100px;
   color: #ff0000;

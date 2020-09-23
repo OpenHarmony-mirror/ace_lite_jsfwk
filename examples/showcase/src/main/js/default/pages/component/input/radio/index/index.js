@@ -12,10 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    goAttrs: routePage("pages/component/input/radio/attr/attr").changePage,
-    goStyle: routePage("pages/component/input/radio/style/style").changePage,
-    goEvent: routePage("pages/component/input/radio/event/event").changePage,
-    ...backPage("pages/component/input/index/index")
-}
+  goAttrs: routePage("pages/component/input/radio/attr/attr").changePage,
+  goStyle: routePage("pages/component/input/radio/style/style").changePage,
+  goEvent: routePage("pages/component/input/radio/event/event").changePage,
+  ...backPage("pages/component/input/index/index")
+};

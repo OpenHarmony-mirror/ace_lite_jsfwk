@@ -12,12 +12,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    ...backPage("pages/component/list/index/index"),
-    changePage1: routePage("pages/component/list/list/indexAttr/index").changePage,
-    changePage2: routePage("pages/component/list/list/indexCommonStyle/index").changePage,
-    changePage3: routePage("pages/component/list/list/indexSpecStyle/index").changePage,
-    changePage4: routePage("pages/component/list/list/indexEvent/index").changePage,
-    changePage5: routePage("pages/component/list/list/indexOperation/index").changePage
-}
+  ...backPage("pages/component/list/index/index"),
+  changePage1: routePage("pages/component/list/list/indexAttr/index").changePage,
+  changePage2: routePage("pages/component/list/list/indexCommonStyle/index").changePage,
+  changePage3: routePage("pages/component/list/list/indexSpecStyle/index").changePage,
+  changePage4: routePage("pages/component/list/list/indexEvent/index").changePage,
+  changePage5: routePage("pages/component/list/list/indexOperation/index").changePage
+};

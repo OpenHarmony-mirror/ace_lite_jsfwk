@@ -12,18 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage, eventCommon} from "../../../../../common/js/general";
-import {dataCommon} from "../../../../../common/js/chart";
+import { backPage, routePage, eventCommon } from "../../../../../common/js/general";
+import { dataCommon } from "../../../../../common/js/chart";
 export default {
-    ...backPage("pages/component/chart/lineChart/indexEvent/index"),
-    data: {
-        datasets: dataCommon.datasets.linesets,
-        options: dataCommon.options,
-        text1: eventCommon().text1,
-        text2: eventCommon().text2,
-        text3: eventCommon().text3,
-    },
-    clickFunc: eventCommon().clickFunc,
-    longpressFunc: eventCommon().longpressFunc,
-    swipeFunc: eventCommon().swipeFunc
-}
+  ...backPage("pages/component/chart/lineChart/indexEvent/index"),
+  data: {
+    datasets: dataCommon.datasets.linesets,
+    options: dataCommon.options,
+    text1: eventCommon().text1,
+    text2: eventCommon().text2,
+    text3: eventCommon().text3
+  },
+  clickFunc: eventCommon().clickFunc,
+  longpressFunc: eventCommon().longpressFunc,
+  swipeFunc: eventCommon().swipeFunc
+};

@@ -12,20 +12,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        text1: "上面绿块为list",
-        text2: "点击按钮切换display",
-        text3: "支持flex/none",
-        display: "flex"
-    },
-    ...backPage("pages/component/list/list/indexCommonStyle/index"),
-    changeDisplay: function () {
-        if (this.display === "flex") {
-            this.display = "none";
-        } else {
-            this.display = "flex";
-        }
+  data: {
+    text1: "上面绿块为list",
+    text2: "点击按钮切换display",
+    text3: "支持flex/none",
+    display: "flex"
+  },
+  ...backPage("pages/component/list/list/indexCommonStyle/index"),
+  changeDisplay: function() {
+    if (this.display === "flex") {
+      this.display = "none";
+    } else {
+      this.display = "flex";
     }
-}
+  }
+};

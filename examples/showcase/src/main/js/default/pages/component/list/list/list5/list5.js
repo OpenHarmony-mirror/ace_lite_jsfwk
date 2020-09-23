@@ -12,10 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        text1: "内边距和边框"
-    },
-    ...backPage("pages/component/list/list/indexCommonStyle/index")
-}
+  data: {
+    text1: "内边距和边框"
+  },
+  ...backPage("pages/component/list/list/indexCommonStyle/index")
+};

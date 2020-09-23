@@ -12,12 +12,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
-import {showPage} from "../../../../common/js/swiper";
+import { backPage, routePage } from "../../../../common/js/general";
+import { showPage } from "../../../../common/js/swiper";
 export default {
-    data: {
-        index: 2
-    },
-    ...backPage("pages/component/swiper/indexSpecSet/index"),
-    showPage: showPage
-}
+  data: {
+    index: 2
+  },
+  ...backPage("pages/component/swiper/indexSpecSet/index"),
+  showPage: showPage
+};

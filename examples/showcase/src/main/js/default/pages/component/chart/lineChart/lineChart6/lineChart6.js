@@ -12,16 +12,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
-import {dataCommon, changeStatus} from "../../../../../common/js/chart";
+import { backPage, routePage } from "../../../../../common/js/general";
+import { dataCommon, changeStatus } from "../../../../../common/js/chart";
 export default {
-    ...backPage("pages/component/chart/lineChart/indexAttr/index"),
-    data: {
-        datasets: dataCommon.datasets.linesets,
-        options: dataCommon.options,
-        chart01: "chart01",
-        status: true,
-        text1: "显示状态改变"
-    },
-    changeStatus: changeStatus
-}
+  ...backPage("pages/component/chart/lineChart/indexAttr/index"),
+  data: {
+    datasets: dataCommon.datasets.linesets,
+    options: dataCommon.options,
+    chart01: "chart01",
+    status: true,
+    text1: "显示状态改变"
+  },
+  changeStatus: changeStatus
+};

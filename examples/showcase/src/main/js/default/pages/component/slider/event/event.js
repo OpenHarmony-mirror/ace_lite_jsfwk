@@ -12,21 +12,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage,routePage} from "../../../../common/js/general";
+import { goPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        name: "触发click事件",
-        changename:"触发change事件",
-        swipename: "触发swipe事件",
-    },
-    ...goPage("pages/component/slider/index/index"),
-    clickEvent() {
-        this.name = "click被触发";
-    },
-    changeEvent(value) {
-        this.changename = "change:" + value.progress;
-    },
-    swipeEvent(e) {
-        this.swipename = "swipe方向:" + e.direction;
-    }
-}
+  data: {
+    name: "触发click事件",
+    changename: "触发change事件",
+    swipename: "触发swipe事件"
+  },
+  ...goPage("pages/component/slider/index/index"),
+  clickEvent() {
+    this.name = "click被触发";
+  },
+  changeEvent(value) {
+    this.changename = "change:" + value.progress;
+  },
+  swipeEvent(e) {
+    this.swipename = "swipe方向:" + e.direction;
+  }
+};

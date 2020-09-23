@@ -15,10 +15,8 @@ limitations under the License.
 
     <stack class="stack" >
         <stack style="width:454px;height:80px;top:80px;">
-          <input type="button" style="left:85px;width:130px;height:60px;" value="首页" onclick=backMain>
-          </input>
-          <input type="button" style="left:235px;width:130px;height:60px;" value="上一页" onclick=backSuperior>
-          </input>
+          <input type="button" style="left:85px;width:130px;height:60px;" value="首页" onclick=backMain/>
+          <input type="button" style="left:235px;width:130px;height:60px;" value="上一页" onclick=backSuperior/>
         </stack>
         <image src="common/leftHead.png" style="width:100px;height:100px;top:170px;left:160px;background-color:#00ff00;">
         </image>

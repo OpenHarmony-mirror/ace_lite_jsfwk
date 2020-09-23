@@ -12,18 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage} from "../../../../common/js/general";
+import { backPage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/div/indexAttr/index"),
-    data: {
-        text1: "点击按钮改变状态",
-        status: true
-    },
-    changeStatus: function () {
-        if (this.status == true) {
-            this.status = false;
-        } else {
-            this.status = true;
-        }
+  ...backPage("pages/component/div/indexAttr/index"),
+  data: {
+    text1: "点击按钮改变状态",
+    status: true
+  },
+  changeStatus: function() {
+    if (this.status == true) {
+      this.status = false;
+    } else {
+      this.status = true;
     }
-}
+  }
+};

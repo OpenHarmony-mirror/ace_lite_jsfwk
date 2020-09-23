@@ -22,7 +22,7 @@
 .divBlock {
   width: 200px;
   height: 70px;
-  left:80px;
+  left: 80px;
   background-color: #ff0000;
 }
 
@@ -30,35 +30,35 @@
   animation-duration: 3000ms;
   animation-timing-function: linear;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 .divAnimationStyle2 {
   animation-duration: 3000ms;
   animation-timing-function: ease-in;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 .divAnimationStyle3 {
   animation-duration: 3000ms;
   animation-timing-function: ease-out;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 .divAnimationStyle4 {
   animation-duration: 3000ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 @keyframes animationChange {
   from {
-    width:200px;
+    width: 200px;
   }
   to {
-    width:280px;
+    width: 280px;
   }
 }

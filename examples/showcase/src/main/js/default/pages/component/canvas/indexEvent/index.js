@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/canvas/index/index"),
-    changePage1: routePage("pages/component/canvas/canvas9/index").changePage
-}
+  ...backPage("pages/component/canvas/index/index"),
+  changePage1: routePage("pages/component/canvas/canvas9/index").changePage
+};

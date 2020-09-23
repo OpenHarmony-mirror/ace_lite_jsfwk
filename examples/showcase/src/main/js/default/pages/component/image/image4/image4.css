@@ -19,19 +19,19 @@
 }
 
 .item {
-    width: 280px;
-    height: 50px;
+  width: 280px;
+  height: 50px;
 }
 
 .div1 {
-    height: 145px;
-    width: 160px;
-    border-width: 1px;
-    border-color: #ff0000;
+  height: 145px;
+  width: 160px;
+  border-width: 1px;
+  border-color: #ff0000;
 }
 
 .image {
-    width: 100px;
-    height: 50px;
-    background-color: #00ff00;
+  width: 100px;
+  height: 50px;
+  background-color: #00ff00;
 }

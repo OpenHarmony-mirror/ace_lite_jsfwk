@@ -22,7 +22,7 @@
 .divBlock {
   width: 200px;
   height: 60px;
-  left:120px;
+  left: 120px;
   background-color: #ff0000;
 }
 
@@ -30,7 +30,7 @@
   animation-duration: 3000ms;
   animation-timing-function: linear;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 @keyframes animationChange1 {

@@ -15,22 +15,13 @@
 var router = require("@system.router");
 module.exports = {
   data: {
-    listData: [
-      "a",
-      "b",
-      "c",
-      "d",
-      "e",
-      "f",
-      "g",
-      "h"
-    ]
+    listData: ["a", "b", "c", "d", "e", "f", "g", "h"]
   },
-  backMain: function () {
-        router.replace({ uri: "pages/index/index" });
+  backMain: function() {
+    router.replace({ uri: "pages/index/index" });
   },
-  backSuperior: function () {
-        router.replace({ uri: "pages/component/list/list/indexOperation/index" });
+  backSuperior: function() {
+    router.replace({ uri: "pages/component/list/list/indexOperation/index" });
   },
   listClick() {
     router.replace({ uri: "pages/component/list/list/list13/list13" });
@@ -41,13 +32,13 @@ module.exports = {
     console.log("list onscrollend is triggered, state=" + endState);
   },
   clickscrollTo() {
-    this.$refs.listObj.scrollTo({index:2});
+    this.$refs.listObj.scrollTo({ index: 2 });
   },
   onInit() {
     console.log("on init called...");
   },
   onShow() {
-    this.$refs.listObj.scrollTo({index:3});
+    this.$refs.listObj.scrollTo({ index: 3 });
     console.log("on Ready called...");
-  },
+  }
 };

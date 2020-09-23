@@ -13,37 +13,33 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <list class = "list">
-        <list-item style="width:454px;height:60px;">
-        </list-item>
-        <list-item class= "item-title">
-                <input type = "button" style="margin-left:85px;width:130px;height:60px;" onclick = "goHome" value = "首页"/>
-                <input type = "button" style="margin-left:20px;width:130px;height:60px;" onclick = "goPrevious" value = "上一页"/>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class = "item-types">
-            <text class = "whole-text">特殊事件</text>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class = "item-two">
-            <div class = "two-div">
-                <div class = "two-left-div" style="margin-left:30px;width:170px;">
-                    <text class = "text2">click</text>
-                    <text class = "text2">change</text>
-                    <text class = "text2">swipe</text>
-                </div>
-                <div class = "three-right-div" style = "flex-direction:column">
-                    <slider class = "slider" onclick = "clickEvent"/>
-                    <text class = "text">{{name}}</text>
-                    <slider class = "slider"  onchange = "changeEvent"/>
-                    <text class = "text">{{changename}}</text>
-                    <slider class = "slider"  onswipe = "swipeEvent"/>
-                    <text class = "text">{{swipename}}</text>
-                </div>
-            </div>
-        </list-item>
-        <list-item style="width:454px;height:60px;">
-        </list-item>
-    </list>
+<list class="list">
+  <list-item style="width: 454px; height: 60px"> </list-item>
+  <list-item class="item-title">
+    <input type="button" style="margin-left: 85px; width: 130px; height: 60px" onclick="goHome" value="首页" />
+    <input type="button" style="margin-left: 20px; width: 130px; height: 60px" onclick="goPrevious" value="上一页" />
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-types">
+    <text class="whole-text">特殊事件</text>
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-two">
+    <div class="two-div">
+      <div class="two-left-div" style="margin-left: 30px; width: 170px">
+        <text class="text2">click</text>
+        <text class="text2">change</text>
+        <text class="text2">swipe</text>
+      </div>
+      <div class="three-right-div" style="flex-direction: column">
+        <slider class="slider" onclick="clickEvent"></slider>
+        <text class="text">{{ name }}</text>
+        <slider class="slider" onchange="changeEvent"></slider>
+        <text class="text">{{ changename }}</text>
+        <slider class="slider" onswipe="swipeEvent"></slider>
+        <text class="text">{{ swipename }}</text>
+      </div>
+    </div>
+  </list-item>
+  <list-item style="width: 454px; height: 60px"> </list-item>
+</list>

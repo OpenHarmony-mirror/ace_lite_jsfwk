@@ -12,13 +12,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
-import {changeStatus} from "../../../../../common/js/list"
+import { backPage, routePage } from "../../../../../common/js/general";
+import { changeStatus } from "../../../../../common/js/list";
 export default {
-    data: {
-        text1: "点击按钮改变状态",
-        status: true
-    },
-    changeStatus: changeStatus,
-    ...backPage("pages/component/list/list/indexAttr/index")
-}
+  data: {
+    text1: "点击按钮改变状态",
+    status: true
+  },
+  changeStatus: changeStatus,
+  ...backPage("pages/component/list/list/indexAttr/index")
+};

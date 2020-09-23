@@ -36,11 +36,11 @@
 }
 
 .whole-text {
-  margin-top:10px;
-  margin-left:70px;
-  width:200px;
-  height:60px;
-  font-size:30px;
+  margin-top: 10px;
+  margin-left: 70px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
   color: red;
 }
 
@@ -62,31 +62,31 @@
   height: 50px;
   margin-top: 10px;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .circle {
-  width:100px;
-  height:100px;
-  center-x:50px;
-  center-y:50px;
-  radius:50px;
-  start-angle:0;
-  total-angle:360;
+  width: 100px;
+  height: 100px;
+  center-x: 50px;
+  center-y: 50px;
+  radius: 50px;
+  start-angle: 0;
+  total-angle: 360;
   stroke-width: 6px;
-  background-color: #8B8B7A;
-  color: #ff0000
+  background-color: #8b8b7a;
+  color: #ff0000;
 }
 
 .circle2 {
-  width:30px;
-  height:30px;
-  center-x:15px;
-  center-y:15px;
-  radius:15px;
-  start-angle:0;
-  total-angle:360;
+  width: 30px;
+  height: 30px;
+  center-x: 15px;
+  center-y: 15px;
+  radius: 15px;
+  start-angle: 0;
+  total-angle: 360;
   stroke-width: 6px;
-  background-color: #8B8B7A;
-  color: #ff0000
+  background-color: #8b8b7a;
+  color: #ff0000;
 }

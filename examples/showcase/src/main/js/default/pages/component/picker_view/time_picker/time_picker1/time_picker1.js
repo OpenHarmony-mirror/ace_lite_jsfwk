@@ -12,15 +12,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        time1: -1,
-        time2: -1
-    },
-    ...backPage("pages/component/picker_view/time_picker/indexEvent/index"),
-    getTime: function (e1) {
-        this.time1 = e1.hour;
-        this.time2 = e1.minute;
-    }
-}
+  data: {
+    time1: -1,
+    time2: -1
+  },
+  ...backPage("pages/component/picker_view/time_picker/indexEvent/index"),
+  getTime: function(e1) {
+    this.time1 = e1.hour;
+    this.time2 = e1.minute;
+  }
+};

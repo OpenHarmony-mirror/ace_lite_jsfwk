@@ -36,22 +36,22 @@
 }
 
 .whole-text {
-  margin-top:10px;
-  margin-left:150px;
-  width:200px;
-  height:60px;
-  font-size:30px;
+  margin-top: 10px;
+  margin-left: 150px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
   color: red;
 }
 
 .circle {
-  width:100px;
-  height:100px;
-  center-x:50px;
-  center-y:50px;
-  radius:50px;
-  start-angle:0;
-  total-angle:360;
+  width: 100px;
+  height: 100px;
+  center-x: 50px;
+  center-y: 50px;
+  radius: 50px;
+  start-angle: 0;
+  total-angle: 360;
 }
 
 .item-click {
@@ -87,7 +87,7 @@
   height: 50px;
   margin-top: 10px;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .text2 {
@@ -95,6 +95,6 @@
   height: 100px;
   margin-top: 10px;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
   text-overflow: ellipsis;
 }

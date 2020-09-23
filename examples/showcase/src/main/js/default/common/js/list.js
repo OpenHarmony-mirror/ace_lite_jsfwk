@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 // list.js
-export const changeStatus = function () {
+export const changeStatus = function() {
   if (this.status == true) {
     this.status = false;
   } else {

@@ -13,21 +13,20 @@
  * limitations under the License.
  */
 
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        text1: "上面绿块为canvas",
-        text2: "点击按钮切换display",
-        text3: "支持flex/none",
-        displayValue: "flex"
-    },
-    ...backPage("pages/component/canvas/indexCommonStyle/index"),
-    changeDisplay: function () {
-        if (this.displayValue === "flex") {
-            this.displayValue = "none";
-        } else {
-            this.displayValue = "flex";
-        }
+  data: {
+    text1: "上面绿块为canvas",
+    text2: "点击按钮切换display",
+    text3: "支持flex/none",
+    displayValue: "flex"
+  },
+  ...backPage("pages/component/canvas/indexCommonStyle/index"),
+  changeDisplay: function() {
+    if (this.displayValue === "flex") {
+      this.displayValue = "none";
+    } else {
+      this.displayValue = "flex";
     }
-
-}
+  }
+};

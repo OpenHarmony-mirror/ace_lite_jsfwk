@@ -13,10 +13,10 @@
  * limitations under the License.
  */
 .textPickStyle {
-    color:green;
-    font-size:30px;
-    font-family:HYQiHei-65S;
-    selected-color:#7ff708;
-    selected-font-size:38px;
-    selected-font-family:HYQiHei-65S;
+  color: green;
+  font-size: 30px;
+  font-family: HYQiHei-65S;
+  selected-color: #7ff708;
+  selected-font-size: 38px;
+  selected-font-family: HYQiHei-65S;
 }

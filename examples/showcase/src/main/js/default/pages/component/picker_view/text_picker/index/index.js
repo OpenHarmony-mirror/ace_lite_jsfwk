@@ -12,10 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    ...backPage("pages/component/picker_view/index/index"),
-    changePage1: routePage("pages/component/picker_view/text_picker/indexAttr/index").changePage,
-    changePage2: routePage("pages/component/picker_view/text_picker/indexStyle/index").changePage,
-    changePage3: routePage("pages/component/picker_view/text_picker/indexEvent/index").changePage
-}
+  ...backPage("pages/component/picker_view/index/index"),
+  changePage1: routePage("pages/component/picker_view/text_picker/indexAttr/index").changePage,
+  changePage2: routePage("pages/component/picker_view/text_picker/indexStyle/index").changePage,
+  changePage3: routePage("pages/component/picker_view/text_picker/indexEvent/index").changePage
+};

@@ -36,11 +36,11 @@
 }
 
 .whole-text {
-  margin-top:10px;
-  margin-left:150px;
-  width:200px;
-  height:60px;
-  font-size:30px;
+  margin-top: 10px;
+  margin-left: 150px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
   color: red;
 }
 
@@ -70,7 +70,7 @@
   height: 50px;
   margin-top: 10px;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .left-text {

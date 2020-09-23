@@ -12,15 +12,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
-import {dataCommon} from "../../../../../common/js/chart";
+import { backPage, routePage } from "../../../../../common/js/general";
+import { dataCommon } from "../../../../../common/js/chart";
 export default {
-    ...backPage("pages/component/chart/lineChart/indexStyle/index"),
-    data: {
-        text1: "背景色绿色",
-        text2: "left设置85",
-        text3: "top设置170",
-        datasets: dataCommon.datasets.linesets,
-        options: dataCommon.options,
-    }
-}
+  ...backPage("pages/component/chart/lineChart/indexStyle/index"),
+  data: {
+    text1: "背景色绿色",
+    text2: "left设置85",
+    text3: "top设置170",
+    datasets: dataCommon.datasets.linesets,
+    options: dataCommon.options
+  }
+};
