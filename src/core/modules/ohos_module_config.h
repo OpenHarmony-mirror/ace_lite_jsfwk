@@ -43,6 +43,27 @@ extern void InitNativeApiKv(JSIValue exports);
 extern void InitDeviceModule(JSIValue exports);
 #endif
 
+#ifdef FEATURE_MODULE_GEO
+extern void InitLocationModule(JSIValue exports);
+#endif
+
+#ifdef FEATURE_MODULE_SENSOR
+extern void InitVibratorModule(JSIValue exports);
+extern void InitSensorModule(JSIValue exports);
+#endif
+
+#ifdef FEATURE_MODULE_BRIGHTNESS
+extern void InitBrightnessModule(JSIValue exports);
+#endif
+
+#ifdef FEATURE_MODULE_BATTERY
+extern void InitBatteryModule(JSIValue exports);
+#endif
+
+#ifdef FEATURE_MODULE_CONFIGURATION
+extern void InitLocaleModule(JSIValue exports);
+#endif
+
 // Config information for built-in JS modules of OHOS platform
 const Module OHOS_MODULES[] = {
 #ifdef ENABLE_MODULE_REQUIRE_TEST
@@ -64,6 +85,22 @@ const Module OHOS_MODULES[] = {
 #endif
 #ifdef FEATURE_MODULE_DEVICE
     {"device", InitDeviceModule},
+#endif
+#ifdef FEATURE_MODULE_GEO
+    {"geolocation", InitLocationModule},
+#endif
+#ifdef FEATURE_MODULE_SENSOR
+    {"vibrator", InitVibratorModule},
+    {"sensor", InitSensorModule},
+#endif
+#ifdef FEATURE_MODULE_BRIGHTNESS
+    {"brightness", InitBrightnessModule},
+#endif
+#ifdef FEATURE_MODULE_BATTERY
+    {"battery", InitBatteryModule},
+#endif
+#ifdef FEATURE_MODULE_CONFIGURATION
+    {"configuration", InitLocaleModule},
 #endif
 };
 } // namespace ACELite
