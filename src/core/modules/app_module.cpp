@@ -39,13 +39,13 @@ JSIValue AppModule::GetInfo(const JSIValue thisVal, const JSIValue *args, uint8_
     cJSON *versionCode = cJSON_GetObjectItem(manifest, KEY_VERSION_CODE);
 
     result = JSI::CreateObject();
-    if (appName != nullptr) {
+    if (appName != nullptr && appName->type == cJSON_String) {
         JSI::SetStringProperty(result, KEY_APP_NAME, appName->valuestring);
     }
-    if (versionName != nullptr) {
+    if (versionName != nullptr && versionName->type == cJSON_String) {
         JSI::SetStringProperty(result, KEY_VERSION_NAME, versionName->valuestring);
     }
-    if (versionCode != nullptr) {
+    if (versionCode != nullptr && versionCode->type == cJSON_Number) {
         JSI::SetNumberProperty(result, KEY_VERSION_CODE, versionCode->valuedouble);
     }
     cJSON_Delete(manifest);
