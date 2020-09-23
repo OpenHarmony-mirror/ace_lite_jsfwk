@@ -12,38 +12,38 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage, routePage} from "../../../../common/js/general";
+import { goPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        slideValue: "值："+"40",
-        status: true,
-        sliders:[1,2],
-        isDisplay:'flex',
-        ifStatus:true
-    },
-    ...goPage("pages/component/slider/index/index"),
-    slideEvent(value) {
-        this.slideValue = "值："+value.progress;
-    },
-    changeStatus: function () {
-        if (this.status == true) {
-            this.status = false;
-        } else {
-            this.status = true;
-        }
-    },
-    changeIfStatus:function(){
-        if(this.ifStatus == true){
-            this.ifStatus = false;
-        } else if(this.ifStatus == false){
-            this.ifStatus = true;
-        }
-    },
-    changeDisplay:function(){
-        if(this.isDisplay == 'flex'){
-            this.isDisplay = 'none';
-        } else if(this.isDisplay == 'none'){
-            this.isDisplay = 'flex';
-        }
+  data: {
+    slideValue: "值：" + "40",
+    status: true,
+    sliders: [1, 2],
+    isDisplay: "flex",
+    ifStatus: true
+  },
+  ...goPage("pages/component/slider/index/index"),
+  slideEvent(value) {
+    this.slideValue = "值：" + value.progress;
+  },
+  changeStatus: function() {
+    if (this.status == true) {
+      this.status = false;
+    } else {
+      this.status = true;
     }
-}
+  },
+  changeIfStatus: function() {
+    if (this.ifStatus == true) {
+      this.ifStatus = false;
+    } else if (this.ifStatus == false) {
+      this.ifStatus = true;
+    }
+  },
+  changeDisplay: function() {
+    if (this.isDisplay == "flex") {
+      this.isDisplay = "none";
+    } else if (this.isDisplay == "none") {
+      this.isDisplay = "flex";
+    }
+  }
+};

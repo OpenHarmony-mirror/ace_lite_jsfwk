@@ -13,22 +13,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<stack class="stack" >
-  <stack style="width:454;height:80;top:80;">
-    <input type="button" style="left:85;width:130;height:60;" value="首页" onclick=backMain>
-    </input>
-    <input type="button" style="left:235;width:130;height:60;" value="上一页" onclick=backSuperior>
-    </input>
+<stack class="stack">
+  <stack style="width: 454; height: 80; top: 80">
+    <input type="button" style="left: 85; width: 130; height: 60" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235; width: 130; height: 60" value="上一页" onclick="backSuperior" />
   </stack>
-  <canvas ref="canvas1" style="width:280;height:80;top:170;left:85;background-color:#00ff00;" onclick=clickFunc onlongpress=longPressFunc onswipe=swipeFunc>
+  <canvas
+    ref="canvas1"
+    style="width: 280; height: 80; top: 170; left: 85; background-color: #00ff00"
+    onclick="clickFunc"
+    onlongpress="longPressFunc"
+    onswipe="swipeFunc"
+  >
   </canvas>
-  <text style="left:40;height:40;width:400;top:260;color:#ffa500">
-    {{text1}}
+  <text style="left: 40; height: 40; width: 400; top: 260; color: #ffa500">
+    {{ text1 }}
   </text>
-  <text class="text" style="left:40;width:400;top:310;">
-    矩形为canvas组件
-  </text>
-  <text class="text" style="left:40;width:400;top:360;">
-    点击/长按/滑动canvas内部任意位置触发事件
-  </text>
+  <text class="text" style="left: 40; width: 400; top: 310"> 矩形为canvas组件 </text>
+  <text class="text" style="left: 40; width: 400; top: 360"> 点击/长按/滑动canvas内部任意位置触发事件 </text>
 </stack>

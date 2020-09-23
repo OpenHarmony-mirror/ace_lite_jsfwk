@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage} from "../../../../common/js/general";
+import { backPage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/image/indexStyle/index"),
-    data: {
-        text1: "margin已设置",
-        text2: "宽高已设置"
-    }
-}
+  ...backPage("pages/component/image/indexStyle/index"),
+  data: {
+    text1: "margin已设置",
+    text2: "宽高已设置"
+  }
+};

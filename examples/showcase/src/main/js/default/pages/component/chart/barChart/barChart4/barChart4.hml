@@ -13,15 +13,33 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <div style="height:454px;width:454px;flex-direction:column;" >
-        <stack style="width:454px;height:80px;margin-top:80px;">
-          <input type="button" style="left:85px;width:130px;height:60px;" value="首页" onclick=backMain>
-          </input>
-          <input type="button" style="left:235px;width:130px;height:60px;" value="上一页" onclick=backSuperior>
-          </input>
-        </stack>
-        <chart type="bar" datasets="{{datasets}}" options="{{options}}" style="type:bar;width:260px;height:60px;margin-top:10px;margin-left:85px;background-color:#00ff00;">
-        </chart>
-        <chart type="bar" datasets="{{datasets}}" options="{{options}}" style="type:bar;width:260px;height:60px;margin-top:10px;margin-left:85px;background-color:#00ff00;padding:10px;border-width:10px;border-color:#ff0000;">
-        </chart>
-    </div>
+<div style="height: 454px; width: 454px; flex-direction: column">
+  <stack style="width: 454px; height: 80px; margin-top: 80px">
+    <input type="button" style="left: 85px; width: 130px; height: 60px" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235px; width: 130px; height: 60px" value="上一页" onclick="backSuperior" />
+  </stack>
+  <chart
+    type="bar"
+    datasets="{{ datasets }}"
+    options="{{ options }}"
+    style="type: bar; width: 260px; height: 60px; margin-top: 10px; margin-left: 85px; background-color: #00ff00"
+  >
+  </chart>
+  <chart
+    type="bar"
+    datasets="{{ datasets }}"
+    options="{{ options }}"
+    style="
+      type: bar;
+      width: 260px;
+      height: 60px;
+      margin-top: 10px;
+      margin-left: 85px;
+      background-color: #00ff00;
+      padding: 10px;
+      border-width: 10px;
+      border-color: #ff0000;
+    "
+  >
+  </chart>
+</div>

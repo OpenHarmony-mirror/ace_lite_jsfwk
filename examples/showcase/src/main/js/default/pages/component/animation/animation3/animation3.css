@@ -22,7 +22,7 @@
 .divBlock {
   width: 200px;
   height: 80px;
-  left:120px;
+  left: 120px;
   background-color: #ff0000;
 }
 
@@ -30,21 +30,21 @@
   animation-duration: 3000ms;
   animation-timing-function: linear;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 .divAnimationStyle2 {
   animation-duration: 5000ms;
   animation-timing-function: linear;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 .divAnimationStyle3 {
   animation-duration: 10000ms;
   animation-timing-function: linear;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 @keyframes animationChange {

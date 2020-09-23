@@ -13,24 +13,18 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <list style="left:0px;top:0px;flex-direction:column;width:454px;height:454px;">
-      <list-item style="height:40px;width:454px;">
-      </list-item>
-      <list-item class="buttonContainerStyle">
-          <input type="button" class="buttonStyle" value="返回首页" onclick="backMain"/>
-      </list-item>
-      <list-item class="separatorContainerStyle">
-      </list-item>
-      <list-item class="titleContainerStyle">
-          <text class="titleTextStyle">
-               其他
-          </text>
-      </list-item>
-      <list-item class="separatorContainerStyle">
-      </list-item>
-      <list-item class="buttonContainerStyle">
-          <input type="button" class="buttonStyle" value="animation" onclick="changeAnimation"/>
-      </list-item>
-      <list-item style="height:40px;width:454px;">
-      </list-item>
-    </list>
+<list style="left: 0px; top: 0px; flex-direction: column; width: 454px; height: 454px">
+  <list-item style="height: 40px; width: 454px"> </list-item>
+  <list-item class="buttonContainerStyle">
+    <input type="button" class="buttonStyle" value="返回首页" onclick="backMain" />
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="titleContainerStyle">
+    <text class="titleTextStyle"> 其他 </text>
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="buttonContainerStyle">
+    <input type="button" class="buttonStyle" value="animation" onclick="changeAnimation" />
+  </list-item>
+  <list-item style="height: 40px; width: 454px"> </list-item>
+</list>

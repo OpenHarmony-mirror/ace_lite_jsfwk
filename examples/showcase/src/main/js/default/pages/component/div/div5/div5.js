@@ -15,5 +15,5 @@
 // div5.js
 import { backPage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/div/indexSpecStyle/index")
-}
+  ...backPage("pages/component/div/indexSpecStyle/index")
+};

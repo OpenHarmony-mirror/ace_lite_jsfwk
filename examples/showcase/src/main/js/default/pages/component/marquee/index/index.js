@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    changePage1: routePage("pages/component/marquee/attr/attr").changePage,
-    changePage2: routePage("pages/component/marquee/commonStyle/commonStyle").changePage,
-    changePage3: routePage("pages/component/marquee/specStyle/specStyle").changePage,
-    changePage4: routePage("pages/component/marquee/event/event").changePage,
-    ...backPage("pages/component/index/baseIndex/index")
+  changePage1: routePage("pages/component/marquee/attr/attr").changePage,
+  changePage2: routePage("pages/component/marquee/commonStyle/commonStyle").changePage,
+  changePage3: routePage("pages/component/marquee/specStyle/specStyle").changePage,
+  changePage4: routePage("pages/component/marquee/event/event").changePage,
+  ...backPage("pages/component/index/baseIndex/index")
 };

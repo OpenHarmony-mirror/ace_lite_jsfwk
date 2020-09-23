@@ -13,11 +13,11 @@
  * limitations under the License.
  */
 
-import {goPage, routePage} from "../../../../common/js/general";
+import { goPage, routePage } from "../../../../common/js/general";
 export default {
-    ...goPage("pages/component/index/baseIndex/index"),
-    changePage1: routePage("pages/component/canvas/indexAttr/index").changePage,
-    changePage2: routePage("pages/component/canvas/indexCommonStyle/index").changePage,
-    changePage3: routePage("pages/component/canvas/indexEvent/index").changePage,
-    changePage4: routePage("pages/component/canvas/indexAPI/index").changePage
-}
+  ...goPage("pages/component/index/baseIndex/index"),
+  changePage1: routePage("pages/component/canvas/indexAttr/index").changePage,
+  changePage2: routePage("pages/component/canvas/indexCommonStyle/index").changePage,
+  changePage3: routePage("pages/component/canvas/indexEvent/index").changePage,
+  changePage4: routePage("pages/component/canvas/indexAPI/index").changePage
+};

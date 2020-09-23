@@ -13,22 +13,19 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<stack class="stack" >
-    <stack style="width:454;height:80;top:50;">
-      <input type="button" style="left:85;width:130;height:60;" value="首页" onclick=backMain>
-      </input>
-      <input type="button" style="left:235;width:130;height:60;" value="上一页" onclick=backSuperior>
-      </input>
-    </stack>
-    <canvas ref="canvasObj" style="width:280;height:130;top:120;left:85;background-color:#00ff00;">
-    </canvas>
-    <text class="text" style="left:85;width:280;top:260;">
-      {{text1}}
-    </text>
-    <text class="text" style="left:85;width:280;top:310;">
-      {{text2}}
-    </text>
-    <text class="text" style="left:85;width:300;top:360;">
-      {{text3}}
-    </text>
+<stack class="stack">
+  <stack style="width: 454; height: 80; top: 50">
+    <input type="button" style="left: 85; width: 130; height: 60" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235; width: 130; height: 60" value="上一页" onclick="backSuperior" />
+  </stack>
+  <canvas ref="canvasObj" style="width: 280; height: 130; top: 120; left: 85; background-color: #00ff00"> </canvas>
+  <text class="text" style="left: 85; width: 280; top: 260">
+    {{ text1 }}
+  </text>
+  <text class="text" style="left: 85; width: 280; top: 310">
+    {{ text2 }}
+  </text>
+  <text class="text" style="left: 85; width: 300; top: 360">
+    {{ text3 }}
+  </text>
 </stack>

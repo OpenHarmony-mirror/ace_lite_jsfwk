@@ -12,12 +12,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        text1: "margin左边距85",
-        text2: "margin上边距10",
-        text3: "宽高已设置"
-    },
-    ...backPage("pages/component/picker_view/time_picker/indexStyle/index")
-}
+  data: {
+    text1: "margin左边距85",
+    text2: "margin上边距10",
+    text3: "宽高已设置"
+  },
+  ...backPage("pages/component/picker_view/time_picker/indexStyle/index")
+};

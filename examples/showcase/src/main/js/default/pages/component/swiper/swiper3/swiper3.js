@@ -14,11 +14,11 @@
  */
 // swiper3.js
 import { backPage, routePage } from "../../../../common/js/general";
-import {showPage} from "../../../../common/js/swiper";
+import { showPage } from "../../../../common/js/swiper";
 export default {
-    data: {
-        index: 0
-    },
-    ...backPage("pages/component/swiper/indexStyle/index"),
-    showPage: showPage
-}
+  data: {
+    index: 0
+  },
+  ...backPage("pages/component/swiper/indexStyle/index"),
+  showPage: showPage
+};

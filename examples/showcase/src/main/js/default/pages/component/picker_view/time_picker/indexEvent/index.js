@@ -12,8 +12,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    ...backPage("pages/component/picker_view/time_picker/index/index"),
-    changePage1: routePage("pages/component/picker_view/time_picker/time_picker1/time_picker1").changePage
-}
+  ...backPage("pages/component/picker_view/time_picker/index/index"),
+  changePage1: routePage("pages/component/picker_view/time_picker/time_picker1/time_picker1").changePage
+};

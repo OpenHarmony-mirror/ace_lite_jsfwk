@@ -13,29 +13,24 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<stack style="left:0;right:0;width:454;height:454;">
-  <list style="left:0;right:0;width:454;height:454;flex-direction:column">
-    <list-item style="width:454;height:60;">
+<stack style="left: 0; right: 0; width: 454; height: 454">
+  <list style="left: 0; right: 0; width: 454; height: 454; flex-direction: column">
+    <list-item style="width: 454; height: 60"> </list-item>
+    <list-item style="width: 454; height: 80">
+      <input type="button" style="margin-left: 85; width: 130; height: 60" onclick="goHome" value="返回首页" />
+      <input type="button" style="margin-left: 20; width: 130; height: 60" onclick="goPrevious" value="返回上页" />
     </list-item>
-    <list-item style="width:454;height:80;">
-      <input type = "button" style="margin-left:85;width:130;height:60;" onclick = "goHome" value = "返回首页"/>
-      <input type = "button" style="margin-left:20;width:130;height:60;" onclick = "goPrevious" value = "返回上页"/>
-    </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
+    <list-item class="separatorContainerStyle"> </list-item>
     <list-item class="titleContainerStyle">
-        <text class="titleTextStyle" value="API">
-        </text>
+      <text class="titleTextStyle" value="API"> </text>
     </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
+    <list-item class="separatorContainerStyle"> </list-item>
     <list-item class="buttonContainerStyle">
-        <input type="button" class="buttonStyle" value="属性接口" onclick="changePage1"/>
+      <input type="button" class="buttonStyle" value="属性接口" onclick="changePage1" />
     </list-item>
-    <list-item class="separatorContainerStyle">
-    </list-item>
+    <list-item class="separatorContainerStyle"> </list-item>
     <list-item class="buttonContainerStyle">
-        <input type="button" class="buttonStyle" value="绘图接口" onclick="changePage2"/>
+      <input type="button" class="buttonStyle" value="绘图接口" onclick="changePage2" />
     </list-item>
   </list>
 </stack>

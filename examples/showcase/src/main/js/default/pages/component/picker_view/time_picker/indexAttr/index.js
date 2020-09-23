@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    ...backPage("pages/component/picker_view/time_picker/index/index"),
-    changePage1: routePage("pages/component/picker_view/time_picker/time_picker6/time_picker6").changePage,
-    changePage2: routePage("pages/component/picker_view/time_picker/time_picker5/time_picker5").changePage,
-    change2If: routePage("pages/component/picker_view/time_picker/time_picker7/time_picker7").changePage,
-    change2For: routePage("pages/component/picker_view/time_picker/time_picker8/time_picker8").changePage
-}
+  ...backPage("pages/component/picker_view/time_picker/index/index"),
+  changePage1: routePage("pages/component/picker_view/time_picker/time_picker6/time_picker6").changePage,
+  changePage2: routePage("pages/component/picker_view/time_picker/time_picker5/time_picker5").changePage,
+  change2If: routePage("pages/component/picker_view/time_picker/time_picker7/time_picker7").changePage,
+  change2For: routePage("pages/component/picker_view/time_picker/time_picker8/time_picker8").changePage
+};

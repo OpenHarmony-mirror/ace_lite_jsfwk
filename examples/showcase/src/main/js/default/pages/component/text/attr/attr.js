@@ -12,17 +12,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage,routePage} from "../../../../common/js/general";
-import {changeShow, changeStatusIf} from "../../../../common/js/text"
+import { goPage, routePage } from "../../../../common/js/general";
+import { changeShow, changeStatusIf } from "../../../../common/js/text";
 export default {
-    data: {
-        showStatus: true,
-        ifStatus: true,
-        display: "flex",
-        textfor: ["text测试for标签，abcdefg",
-        "text测试for标签，abcdefg"]
-    },
-    ...goPage("pages/component/text/index/index"),
-    changeShow: changeShow,
-    changeStatusIf: changeStatusIf
-}
+  data: {
+    showStatus: true,
+    ifStatus: true,
+    display: "flex",
+    textfor: ["text测试for标签，abcdefg", "text测试for标签，abcdefg"]
+  },
+  ...goPage("pages/component/text/index/index"),
+  changeShow: changeShow,
+  changeStatusIf: changeStatusIf
+};

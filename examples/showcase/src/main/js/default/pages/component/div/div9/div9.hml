@@ -13,27 +13,33 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <div style="height:454px;width:454px;flex-direction:column;" >
-        <stack style="width:454px;height:80px;margin-top:80px;">
-          <input type="button" style="left:85px;width:130px;height:60px;top:10px;" value="首页" onclick=backMain>
-          </input>
-          <input type="button" style="left:235px;width:130px;height:60px;top:10px;" value="上一页" onclick=backSuperior>
-          </input>
-        </stack>
-        <div style="width:280px;height:180px;margin-top:20px;margin-left:85px;background-color:#00ff00;flex-wrap:wrap;justify-content:space-around;">
-          <div style="width:50px;height:50px;background-color:#ff0000;">
-          </div>
-          <div style="width:50px;height:50px;background-color:#0000ff;">
-          </div>
-          <div style="width:50px;height:50px;background-color:#ff0000;">
-          </div>
-          <div style="width:50px;height:50px;background-color:#0000ff;">
-          </div>
-          <div style="width:50px;height:50px;background-color:#ff0000;">
-          </div>
-          <div style="width:50px;height:50px;background-color:#0088ff;">
-          </div>
-          <div style="width:50px;height:50px;background-color:#ff8800;">
-          </div>
-        </div>
-    </div>
+<div style="height: 454px; width: 454px; flex-direction: column">
+  <stack style="width: 454px; height: 80px; margin-top: 80px">
+    <input type="button" style="left: 85px; width: 130px; height: 60px; top: 10px" value="首页" onclick="backMain" />
+    <input
+      type="button"
+      style="left: 235px; width: 130px; height: 60px; top: 10px"
+      value="上一页"
+      onclick="backSuperior"
+    />
+  </stack>
+  <div
+    style="
+      width: 280px;
+      height: 180px;
+      margin-top: 20px;
+      margin-left: 85px;
+      background-color: #00ff00;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    "
+  >
+    <div style="width: 50px; height: 50px; background-color: #ff0000"></div>
+    <div style="width: 50px; height: 50px; background-color: #0000ff"></div>
+    <div style="width: 50px; height: 50px; background-color: #ff0000"></div>
+    <div style="width: 50px; height: 50px; background-color: #0000ff"></div>
+    <div style="width: 50px; height: 50px; background-color: #ff0000"></div>
+    <div style="width: 50px; height: 50px; background-color: #0088ff"></div>
+    <div style="width: 50px; height: 50px; background-color: #ff8800"></div>
+  </div>
+</div>

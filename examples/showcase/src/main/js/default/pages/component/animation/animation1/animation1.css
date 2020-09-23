@@ -22,7 +22,7 @@
 .divBlock {
   width: 200px;
   height: 80px;
-  left:120px;
+  left: 120px;
   background-color: #ff0000;
 }
 
@@ -30,7 +30,7 @@
   animation-duration: 3000ms;
   animation-timing-function: linear;
   animation-fill-mode: none;
-  animation-iteration-count:1;
+  animation-iteration-count: 1;
 }
 
 @keyframes animationChange1 {
@@ -44,18 +44,18 @@
 
 @keyframes animationChange2 {
   from {
-    width:200px;
+    width: 200px;
   }
   to {
-    width:250px;
+    width: 250px;
   }
 }
 
 @keyframes animationChange3 {
   from {
-    height:80px;
+    height: 80px;
   }
   to {
-    height:130px;
+    height: 130px;
   }
 }

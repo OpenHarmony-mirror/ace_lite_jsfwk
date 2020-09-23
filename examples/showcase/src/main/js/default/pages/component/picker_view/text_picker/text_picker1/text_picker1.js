@@ -12,16 +12,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        text1: 0,
-        text2: "a",
-        textContent: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
-    },
-    ...backPage("pages/component/picker_view/text_picker/indexEvent/index"),
-    getText: function (e1) {
-        this.text1 = e1.newSelected;
-        this.text2 = e1.newValue;
-    }
-}
+  data: {
+    text1: 0,
+    text2: "a",
+    textContent: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
+  },
+  ...backPage("pages/component/picker_view/text_picker/indexEvent/index"),
+  getText: function(e1) {
+    this.text1 = e1.newSelected;
+    this.text2 = e1.newValue;
+  }
+};

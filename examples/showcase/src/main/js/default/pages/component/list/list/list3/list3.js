@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        text1: "上面绿块为list",
-        text2: "背景距离已设置"
-    },
-    ...backPage("pages/component/list/list/indexCommonStyle/index")
-}
+  data: {
+    text1: "上面绿块为list",
+    text2: "背景距离已设置"
+  },
+  ...backPage("pages/component/list/list/indexCommonStyle/index")
+};

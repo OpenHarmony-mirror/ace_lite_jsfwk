@@ -12,12 +12,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    ...backPage("pages/component/picker_view/text_picker/index/index"),
-    changePage1: routePage("pages/component/picker_view/text_picker/text_picker2/text_picker2").changePage,
-    changePage2: routePage("pages/component/picker_view/text_picker/text_picker3/text_picker3").changePage,
-    changePage3: routePage("pages/component/picker_view/text_picker/text_picker4/text_picker4").changePage,
-    change2Style: routePage("pages/component/picker_view/text_picker/text_picker9/text_picker9").changePage,
-    change2Display: routePage("pages/component/picker_view/text_picker/text_picker10/text_picker10").changePage
-}
+  ...backPage("pages/component/picker_view/text_picker/index/index"),
+  changePage1: routePage("pages/component/picker_view/text_picker/text_picker2/text_picker2").changePage,
+  changePage2: routePage("pages/component/picker_view/text_picker/text_picker3/text_picker3").changePage,
+  changePage3: routePage("pages/component/picker_view/text_picker/text_picker4/text_picker4").changePage,
+  change2Style: routePage("pages/component/picker_view/text_picker/text_picker9/text_picker9").changePage,
+  change2Display: routePage("pages/component/picker_view/text_picker/text_picker10/text_picker10").changePage
+};

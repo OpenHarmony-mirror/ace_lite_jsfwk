@@ -12,19 +12,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage,routePage} from "../../../../common/js/general";
+import { goPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        text: "点击/长按/滑动"
-    },
-    ...goPage("pages/component/text/index/index"),
-    clickEvent(e) {
-        this.text = "点击已触发";
-    },
-    longpressEvent() {
-        this.text = "长按已触发";
-    },
-    swipeEvent(e) {
-        this.text = "swipe方向：" + e.direction;
-    }
-}
+  data: {
+    text: "点击/长按/滑动"
+  },
+  ...goPage("pages/component/text/index/index"),
+  clickEvent(e) {
+    this.text = "点击已触发";
+  },
+  longpressEvent() {
+    this.text = "长按已触发";
+  },
+  swipeEvent(e) {
+    this.text = "swipe方向：" + e.direction;
+  }
+};

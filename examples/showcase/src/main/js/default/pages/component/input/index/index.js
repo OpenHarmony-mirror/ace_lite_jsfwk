@@ -12,10 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage, routePage} from "../../../../common/js/general";
+import { goPage, routePage } from "../../../../common/js/general";
 export default {
-    ...goPage("pages/component/index/formIndex/index"),
-    changeButton: routePage("pages/component/input/button/index/index").changePage,
-    changeCheckbox: routePage("pages/component/input/checkbox/index/index").changePage,
-    changeRadio:routePage("pages/component/input/radio/index/index").changePage
-}
+  ...goPage("pages/component/index/formIndex/index"),
+  changeButton: routePage("pages/component/input/button/index/index").changePage,
+  changeCheckbox: routePage("pages/component/input/checkbox/index/index").changePage,
+  changeRadio: routePage("pages/component/input/radio/index/index").changePage
+};

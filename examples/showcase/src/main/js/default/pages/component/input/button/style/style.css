@@ -24,7 +24,7 @@
   height: 50px;
   margin-top: 10px;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .item-title {
@@ -44,11 +44,11 @@
 }
 
 .whole-text {
-  margin-top:10px;
-  margin-left:150px;
-  width:200px;
-  height:60px;
-  font-size:30px;
+  margin-top: 10px;
+  margin-left: 150px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
   color: red;
 }
 
@@ -131,32 +131,31 @@
 .style-button {
   width: 150px;
   height: 50px;
-  font-size:38px;
+  font-size: 38px;
   color: red;
   font-family: HYQiHei-65S;
 }
 
-
-.backColorBtn{
+.backColorBtn {
   width: 150px;
-  height:50px;
-  margin-left:100px;
+  height: 50px;
+  margin-left: 100px;
   margin-top: 10px;
-  background-color: aqua
+  background-color: aqua;
 }
 
-.backColorBtn:active{
-background-color: coral
+.backColorBtn:active {
+  background-color: coral;
 }
 
-.backImgBtn{
+.backImgBtn {
   width: 150px;
-  height:50px;
-  margin-left:100px;
+  height: 50px;
+  margin-left: 100px;
   margin-top: 10px;
-  background-image: url(common/icon_small.png)
+  background-image: url(common/icon_small.png);
 }
 
-.backImgBtn:active{
-background-image: url(common/icon.png)
+.backImgBtn:active {
+  background-image: url(common/icon.png);
 }

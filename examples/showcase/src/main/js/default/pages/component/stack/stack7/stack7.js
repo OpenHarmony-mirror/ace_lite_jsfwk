@@ -12,19 +12,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        text1: "点击按钮改变状态",
-        loopArray: ["1", "2", "3"],
-        display: "flex"
-    },
-    ...backPage("pages/component/stack/indexAttr/index"),
-    changeDisplay: function () {
-        if (this.display === "flex") {
-            this.display = "none";
-        } else {
-            this.display = "flex";
-        }
+  data: {
+    text1: "点击按钮改变状态",
+    loopArray: ["1", "2", "3"],
+    display: "flex"
+  },
+  ...backPage("pages/component/stack/indexAttr/index"),
+  changeDisplay: function() {
+    if (this.display === "flex") {
+      this.display = "none";
+    } else {
+      this.display = "flex";
     }
-}
+  }
+};

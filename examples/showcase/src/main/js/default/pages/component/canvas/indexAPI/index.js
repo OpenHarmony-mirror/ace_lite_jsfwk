@@ -13,9 +13,9 @@
  * limitations under the License.
  */
 
-import {goPage, routePage} from "../../../../common/js/general";
+import { goPage, routePage } from "../../../../common/js/general";
 export default {
-    ...goPage("pages/component/canvas/index/index"),
-    changePage1: routePage("pages/component/canvas/indexAPIAttr/index").changePage,
-    changePage2: routePage("pages/component/canvas/indexAPIDraw/index").changePage
-}
+  ...goPage("pages/component/canvas/index/index"),
+  changePage1: routePage("pages/component/canvas/indexAPIAttr/index").changePage,
+  changePage2: routePage("pages/component/canvas/indexAPIDraw/index").changePage
+};

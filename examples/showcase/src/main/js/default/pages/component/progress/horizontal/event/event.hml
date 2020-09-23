@@ -13,33 +13,36 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <list class = "list">
-        <list-item style="width:454px;height:60px;">
-        </list-item>
-        <list-item class= "item-title">
-                <input type = "button" style="margin-left:85px;width:130px;height:60px;" onclick = "goHome" value = "首页"/>
-                <input type = "button" style="margin-left:20px;width:130px;height:60px;" onclick = "goPrevious" value = "上一页"/>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class = "item-types">
-            <text class = "whole-text">通用事件</text>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class = "item-click">
-            <div class = "click-div">
-                <div class = "click-left-div" style="margin-left:30px;width:170px;">
-                    <text class = "text">click</text>
-                    <text class = "text">longpress</text>
-                    <text class = "text">swipe</text>
-                </div>
-                <div class = "click-right-div">
-                    <progress type = "horizontal" class = "horizontal-progress" onclick = "clickEvent" onlongpress = "longpressEvent" onswipe = "swipeEvent" percent = "{{percent}}"/>
-                    <text class = "text2">{{value}}</text>
-                </div>
-            </div>
-        </list-item>
-        <list-item style="width:454px;height:60px;">
-        </list-item>
-    </list>
+<list class="list">
+  <list-item style="width: 454px; height: 60px"> </list-item>
+  <list-item class="item-title">
+    <input type="button" style="margin-left: 85px; width: 130px; height: 60px" onclick="goHome" value="首页" />
+    <input type="button" style="margin-left: 20px; width: 130px; height: 60px" onclick="goPrevious" value="上一页" />
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-types">
+    <text class="whole-text">通用事件</text>
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="item-click">
+    <div class="click-div">
+      <div class="click-left-div" style="margin-left: 30px; width: 170px">
+        <text class="text">click</text>
+        <text class="text">longpress</text>
+        <text class="text">swipe</text>
+      </div>
+      <div class="click-right-div">
+        <progress
+          type="horizontal"
+          class="horizontal-progress"
+          onclick="clickEvent"
+          onlongpress="longpressEvent"
+          onswipe="swipeEvent"
+          percent="{{ percent }}"
+        ></progress>
+        <text class="text2">{{ value }}</text>
+      </div>
+    </div>
+  </list-item>
+  <list-item style="width: 454px; height: 60px"> </list-item>
+</list>

@@ -12,9 +12,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage, routePage} from "../../../../common/js/general";
+import { goPage, routePage } from "../../../../common/js/general";
 export default {
-    ...goPage("pages/component/index/baseIndex/index"),
-    changeCircle: routePage("pages/component/progress/circle/index/index").changePage,
-    changeHorizontal: routePage("pages/component/progress/horizontal/index/index").changePage,
-}
+  ...goPage("pages/component/index/baseIndex/index"),
+  changeCircle: routePage("pages/component/progress/circle/index/index").changePage,
+  changeHorizontal: routePage("pages/component/progress/horizontal/index/index").changePage
+};

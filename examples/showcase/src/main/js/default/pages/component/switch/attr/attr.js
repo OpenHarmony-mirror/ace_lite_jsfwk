@@ -12,29 +12,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        status: true,
-        statusIf: true,
-        listData: [
-            true,
-            false
-        ]
-    },
-    ...backPage("pages/component/switch/index/index"),
-    changeStatus: function () {
-        if (this.status == true) {
-            this.status = false;
-        } else {
-            this.status = true;
-        }
-    },
-    changeIf: function () {
-        if (this.statusIf == true) {
-            this.statusIf = false;
-        } else {
-            this.statusIf = true;
-        }
+  data: {
+    status: true,
+    statusIf: true,
+    listData: [true, false]
+  },
+  ...backPage("pages/component/switch/index/index"),
+  changeStatus: function() {
+    if (this.status == true) {
+      this.status = false;
+    } else {
+      this.status = true;
     }
-}
+  },
+  changeIf: function() {
+    if (this.statusIf == true) {
+      this.statusIf = false;
+    } else {
+      this.statusIf = true;
+    }
+  }
+};

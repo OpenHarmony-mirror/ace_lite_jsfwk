@@ -12,17 +12,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        status: "flex"
-    },
-    ...backPage("pages/component/picker_view/time_picker/indexStyle/index"),
-    changeStatus: function () {
-        if (this.status === "flex") {
-            this.status = "none";
-        } else {
-            this.status = "flex";
-        }
+  data: {
+    status: "flex"
+  },
+  ...backPage("pages/component/picker_view/time_picker/indexStyle/index"),
+  changeStatus: function() {
+    if (this.status === "flex") {
+      this.status = "none";
+    } else {
+      this.status = "flex";
     }
-}
+  }
+};

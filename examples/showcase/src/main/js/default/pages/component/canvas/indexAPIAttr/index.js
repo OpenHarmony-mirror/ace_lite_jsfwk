@@ -13,100 +13,100 @@
  * limitations under the License.
  */
 
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/canvas/indexAPI/index"),
-    fillStyleFunc: function () {
-        var canvasRef = this.$refs.canvas1;
-        var ctx = canvasRef.getContext("2d");
+  ...backPage("pages/component/canvas/indexAPI/index"),
+  fillStyleFunc: function() {
+    var canvasRef = this.$refs.canvas1;
+    var ctx = canvasRef.getContext("2d");
 
-        var getFillStyle1 = ctx.fillStyle; // getter默认fillStyle
-        console.info("getFillStyle1=" + getFillStyle1);
+    var getFillStyle1 = ctx.fillStyle; // getter默认fillStyle
+    console.info("getFillStyle1=" + getFillStyle1);
 
-        var getFillStyle2 = ctx.fillStyle; // 再次getter默认fillStyle
-        console.info("getFillStyle2=" + getFillStyle2);
+    var getFillStyle2 = ctx.fillStyle; // 再次getter默认fillStyle
+    console.info("getFillStyle2=" + getFillStyle2);
 
-        ctx.fillStyle = "#00ff00"; // setter
-        //ctx.fillStyle = "rgba(0,255,0,1)"; //支持
-        //ctx.fillStyle = "red";  //不支持
-        ctx.strokeStyle = "#ff0000"; // 因为是填充图形，所以边框设置无效
+    ctx.fillStyle = "#00ff00"; // setter
+    //ctx.fillStyle = "rgba(0,255,0,1)"; //支持
+    //ctx.fillStyle = "red";  //不支持
+    ctx.strokeStyle = "#ff0000"; // 因为是填充图形，所以边框设置无效
 
-        var getFillStyle3 = ctx.fillStyle; // setter后getter fillStyle
-        console.info("getFillStyle3=" + getFillStyle3);
-        ctx.fillRect(20,20,100,150);
-    },
-    strokeStyleFunc: function () {
-        var canvasRef = this.$refs.canvas2;
-        var ctx = canvasRef.getContext("2d");
-        
-        var getStrokeStyle1 = ctx.strokeStyle; // getter默认strokeStyle
-        console.info("getStrokeStyle1=" + getStrokeStyle1);
-        var getStrokeStyle2 = ctx.strokeStyle; // 再次getter默认strokeStyle
-        console.info("getStrokeStyle2=" + getStrokeStyle2);
+    var getFillStyle3 = ctx.fillStyle; // setter后getter fillStyle
+    console.info("getFillStyle3=" + getFillStyle3);
+    ctx.fillRect(20, 20, 100, 150);
+  },
+  strokeStyleFunc: function() {
+    var canvasRef = this.$refs.canvas2;
+    var ctx = canvasRef.getContext("2d");
 
-        ctx.fillStyle = "#00ff00";  // 因为是画矩形框，所以填充设置无效
-        ctx.strokeStyle = "#0000ff"; // setter
+    var getStrokeStyle1 = ctx.strokeStyle; // getter默认strokeStyle
+    console.info("getStrokeStyle1=" + getStrokeStyle1);
+    var getStrokeStyle2 = ctx.strokeStyle; // 再次getter默认strokeStyle
+    console.info("getStrokeStyle2=" + getStrokeStyle2);
 
-        var getStrokeStyle3 = ctx.strokeStyle; // setter之后getter strokeStyle
-        console.info("getStrokeStyle3=" + getStrokeStyle3);
-        ctx.strokeRect(20,20,100,150);
-    },
-    lineWidthFunc: function () {
-        var canvasRef = this.$refs.canvas3;
-        var ctx = canvasRef.getContext("2d");
+    ctx.fillStyle = "#00ff00"; // 因为是画矩形框，所以填充设置无效
+    ctx.strokeStyle = "#0000ff"; // setter
 
-        var getLineWidth1 = ctx.lineWidth; // getter默认lineWidth
-        console.info("getLineWidth1=" + getLineWidth1);
+    var getStrokeStyle3 = ctx.strokeStyle; // setter之后getter strokeStyle
+    console.info("getStrokeStyle3=" + getStrokeStyle3);
+    ctx.strokeRect(20, 20, 100, 150);
+  },
+  lineWidthFunc: function() {
+    var canvasRef = this.$refs.canvas3;
+    var ctx = canvasRef.getContext("2d");
 
-        var getLineWidth2 = ctx.lineWidth; // 再次getter默认lineWidth
-        console.info("getLineWidth2=" + getLineWidth2);
+    var getLineWidth1 = ctx.lineWidth; // getter默认lineWidth
+    console.info("getLineWidth1=" + getLineWidth1);
 
-        ctx.strokeStyle = "#ff0000";
-        ctx.lineWidth = "10"; // setter
+    var getLineWidth2 = ctx.lineWidth; // 再次getter默认lineWidth
+    console.info("getLineWidth2=" + getLineWidth2);
 
-        var getLineWidth3 = ctx.lineWidth; // setter后getter lineWidth
-        console.info("getLineWidth3=" + getLineWidth3);
+    ctx.strokeStyle = "#ff0000";
+    ctx.lineWidth = "10"; // setter
 
-        ctx.strokeRect(20,20,100,150);
-    },
-    fontFunc: function () {
-        var canvasRef = this.$refs.canvas4;
-        var ctx = canvasRef.getContext("2d");
+    var getLineWidth3 = ctx.lineWidth; // setter后getter lineWidth
+    console.info("getLineWidth3=" + getLineWidth3);
 
-        var getFont1 = ctx.font; // getter默认font
-        console.info("getFont1=" + getFont1);
+    ctx.strokeRect(20, 20, 100, 150);
+  },
+  fontFunc: function() {
+    var canvasRef = this.$refs.canvas4;
+    var ctx = canvasRef.getContext("2d");
 
-        var getFont2 = ctx.font; // 再次getter默认font
-        console.info("getFont2=" + getFont2);
+    var getFont1 = ctx.font; // getter默认font
+    console.info("getFont1=" + getFont1);
 
-        ctx.font = "  30px HYQiHei-65S two    three f "; // setter
-        //ctx.font = "  "; // setter
+    var getFont2 = ctx.font; // 再次getter默认font
+    console.info("getFont2=" + getFont2);
 
-        var getFont3 = ctx.font; // setter后getter font
-        console.info("getFont3=" + getFont3);
+    ctx.font = "  30px HYQiHei-65S two    three f "; // setter
+    //ctx.font = "  "; // setter
 
-        ctx.fillText("Hello ACE", 10, 50);
-    },
-    textAlignFunc: function () {
-        var canvasRef = this.$refs.canvas5;
-        var ctx = canvasRef.getContext("2d");
+    var getFont3 = ctx.font; // setter后getter font
+    console.info("getFont3=" + getFont3);
 
-        var getTextAlign1 = ctx.textAlign; // getter默认text align
-        console.info("getTextAlign1=" + getTextAlign1);
+    ctx.fillText("Hello ACE", 10, 50);
+  },
+  textAlignFunc: function() {
+    var canvasRef = this.$refs.canvas5;
+    var ctx = canvasRef.getContext("2d");
 
-        var getTextAlign2 = ctx.textAlign; // 再次getter默认text align
-        console.info("getTextAlign2=" + getTextAlign2);
+    var getTextAlign1 = ctx.textAlign; // getter默认text align
+    console.info("getTextAlign1=" + getTextAlign1);
 
-        ctx.font = "30px HYQiHei-65S";
-        ctx.textAlign = "left"; // setter
-        ctx.fillText("left", 110, 10);
-        ctx.textAlign = "right"; // setter
-        ctx.fillText("right", 110, 50);
-        ctx.textAlign = "center"; // setter
-        ctx.fillText("center", 110, 100);
+    var getTextAlign2 = ctx.textAlign; // 再次getter默认text align
+    console.info("getTextAlign2=" + getTextAlign2);
 
-        var getTextAlign3 = ctx.textAlign; // setter后 getter text align
-        console.info("getTextAlign3=" + getTextAlign3);
-    },
-    jumpFunc: routePage("pages/component/canvas/indexAPIAttr/index").changePage
-}
+    ctx.font = "30px HYQiHei-65S";
+    ctx.textAlign = "left"; // setter
+    ctx.fillText("left", 110, 10);
+    ctx.textAlign = "right"; // setter
+    ctx.fillText("right", 110, 50);
+    ctx.textAlign = "center"; // setter
+    ctx.fillText("center", 110, 100);
+
+    var getTextAlign3 = ctx.textAlign; // setter后 getter text align
+    console.info("getTextAlign3=" + getTextAlign3);
+  },
+  jumpFunc: routePage("pages/component/canvas/indexAPIAttr/index").changePage
+};

@@ -12,13 +12,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    data: {
-        listData: [
-            "第一个swiper",
-            "第二个swiper"
-        ]
-    },
-    ...backPage("pages/component/swiper/indexAttr/index")
-}
+  data: {
+    listData: ["第一个swiper", "第二个swiper"]
+  },
+  ...backPage("pages/component/swiper/indexAttr/index")
+};

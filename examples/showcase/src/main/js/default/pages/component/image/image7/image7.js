@@ -12,18 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage} from "../../../../common/js/general";
+import { backPage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/image/indexAttr/index"),
-    changeDisplay: function () {
-        if (this.display === "flex") {
-            this.display = "none";
-        } else {
-            this.display = "flex";
-        }
-    },
-    data: {
-        loopArray: ["1", "2", "3"],
-        display: "flex"
+  ...backPage("pages/component/image/indexAttr/index"),
+  changeDisplay: function() {
+    if (this.display === "flex") {
+      this.display = "none";
+    } else {
+      this.display = "flex";
     }
-}
+  },
+  data: {
+    loopArray: ["1", "2", "3"],
+    display: "flex"
+  }
+};

@@ -12,18 +12,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage} from "../../../../common/js/general";
+import { backPage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/div/indexCommonStyle/index"),
-    data: {
-        text1: "背景色绿色",
-        text2: "left设置85",
-        text3: "top设置170"
-    },
-    clickFunc: function () {
-        this.text1 = "点击事件已触发";
-    },
-    longpressFunc: function () {
-        this.text2 = "长按事件已触发";
-    }
-}
+  ...backPage("pages/component/div/indexCommonStyle/index"),
+  data: {
+    text1: "背景色绿色",
+    text2: "left设置85",
+    text3: "top设置170"
+  },
+  clickFunc: function() {
+    this.text1 = "点击事件已触发";
+  },
+  longpressFunc: function() {
+    this.text2 = "长按事件已触发";
+  }
+};

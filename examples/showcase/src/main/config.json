@@ -13,10 +13,7 @@
   },
   "deviceConfig": {},
   "module": {
-    "deviceType": [
-      "liteWearable",
-      "smartVision"
-    ],
+    "deviceType": ["liteWearable", "smartVision"],
     "distro": {
       "deliveryWithInstall": true,
       "moduleName": "entry",

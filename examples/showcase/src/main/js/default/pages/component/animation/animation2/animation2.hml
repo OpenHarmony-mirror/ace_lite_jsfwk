@@ -13,16 +13,12 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <stack class="stack" >
-        <stack style="width:454px;height:60px;top:60px;">
-          <input type="button" style="left:85px;width:130px;height:50px;" value="首页" onclick=backMain>
-          </input>
-          <input type="button" style="left:235px;width:130px;height:50px;" value="上一页" onclick=backSuperior>
-          </input>
-        </stack>
-        <div class="divBlock divAnimationStyle" style="animation-name:animationChange1;top:120px;">
-          <text style="width:200px;height:80px;font-size:30px;">
-            delay:3000ms
-          </text>
-        </div>
-    </stack>
+<stack class="stack">
+  <stack style="width: 454px; height: 60px; top: 60px">
+    <input type="button" style="left: 85px; width: 130px; height: 50px" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235px; width: 130px; height: 50px" value="上一页" onclick="backSuperior" />
+  </stack>
+  <div class="divBlock divAnimationStyle" style="animation-name: animationChange1; top: 120px">
+    <text style="width: 200px; height: 80px; font-size: 30px"> delay:3000ms </text>
+  </div>
+</stack>

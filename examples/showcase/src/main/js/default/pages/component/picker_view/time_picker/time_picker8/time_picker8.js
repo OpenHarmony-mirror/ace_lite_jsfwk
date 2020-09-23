@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../../common/js/general";
+import { backPage, routePage } from "../../../../../common/js/general";
 export default {
-    data: {
-        status: true,
-        forData: [0, 1]
-    },
-    ...backPage("pages/component/picker_view/time_picker/indexAttr/index")
-}
+  data: {
+    status: true,
+    forData: [0, 1]
+  },
+  ...backPage("pages/component/picker_view/time_picker/indexAttr/index")
+};

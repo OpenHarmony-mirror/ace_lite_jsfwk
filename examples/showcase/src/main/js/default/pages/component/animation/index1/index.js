@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/animation/index/index"),
-    changePage1: routePage("pages/component/animation/animation1/animation1").changePage,
-    changePage2: routePage("pages/component/animation/animation2/animation2").changePage,
-    changePage3: routePage("pages/component/animation/animation3/animation3").changePage,
-    changePage4: routePage("pages/component/animation/animation4/animation4").changePage
-}
+  ...backPage("pages/component/animation/index/index"),
+  changePage1: routePage("pages/component/animation/animation1/animation1").changePage,
+  changePage2: routePage("pages/component/animation/animation2/animation2").changePage,
+  changePage3: routePage("pages/component/animation/animation3/animation3").changePage,
+  changePage4: routePage("pages/component/animation/animation4/animation4").changePage
+};

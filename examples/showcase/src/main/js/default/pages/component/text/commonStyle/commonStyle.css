@@ -38,11 +38,11 @@
 }
 
 .whole-text {
-  margin-top:10px;
-  margin-left:150px;
-  width:200px;
-  height:60px;
-  font-size:30px;
+  margin-top: 10px;
+  margin-left: 150px;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
   color: red;
 }
 
@@ -51,7 +51,7 @@
   height: 50px;
   margin-top: 10px;
   margin-left: 10px;
-  font-size:30px;
+  font-size: 30px;
 }
 
 .item-three {
@@ -126,11 +126,11 @@
 }
 
 .show {
-  opacity:1;
+  opacity: 1;
   border-width: 5px;
   border-color: #0000ff;
-  border-radius:5px;
-  padding:10px;
+  border-radius: 5px;
+  padding: 10px;
   width: 150px;
   height: 50px;
   background-color: red;

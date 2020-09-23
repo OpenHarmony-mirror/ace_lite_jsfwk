@@ -12,25 +12,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {goPage, routePage} from "../../../../../common/js/general";
+import { goPage, routePage } from "../../../../../common/js/general";
 export default {
-    data:{
-        show:"false",
-        name:"show",
-        status:true
-    },
-    ...goPage("pages/component/input/radio/index/index"),
-    changeShow:function() {
-        this.status = !this.status;
-    },
-    showName:function(e) {
-        this.name = e.name;
-    },
-    changeChecked:function(e) {
-        if(e.checked) {
-            this.show = "true";
-        } else {
-            this.show = "false";
-        }
+  data: {
+    show: "false",
+    name: "show",
+    status: true
+  },
+  ...goPage("pages/component/input/radio/index/index"),
+  changeShow: function() {
+    this.status = !this.status;
+  },
+  showName: function(e) {
+    this.name = e.name;
+  },
+  changeChecked: function(e) {
+    if (e.checked) {
+      this.show = "true";
+    } else {
+      this.show = "false";
     }
-}
+  }
+};

@@ -13,26 +13,22 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-    <list class = "list">
-        <list-item style="height:60px;width:454px;">
-        </list-item>
-        <list-item class = "item-title">
-                <input type = "button" style="margin-left:85px;width:130px;height:60px;" onclick = "goHome" value = "返回首页"/>
-                <input type = "button" style="margin-left:20px;width:130px;height:60px;" onclick = "goPrevious" value = "返回上页"/>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-         <list-item class = "input-item">
-                <input type = "button" value = "button" onclick = "changeButton" class = "input-button"/>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class = "input-item">
-                <input type = "button" value = "checkbox" onclick = "changeCheckbox" class = "input-button"/>
-        </list-item>
-        <list-item class="separatorContainerStyle">
-        </list-item>
-        <list-item class = "input-item">
-                <input type = "button" value = "radio" onclick = "changeRadio" class = "input-button"/>
-        </list-item>
-    </list>
+<list class="list">
+  <list-item style="height: 60px; width: 454px"> </list-item>
+  <list-item class="item-title">
+    <input type="button" style="margin-left: 85px; width: 130px; height: 60px" onclick="goHome" value="返回首页" />
+    <input type="button" style="margin-left: 20px; width: 130px; height: 60px" onclick="goPrevious" value="返回上页" />
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="input-item">
+    <input type="button" value="button" onclick="changeButton" class="input-button" />
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="input-item">
+    <input type="button" value="checkbox" onclick="changeCheckbox" class="input-button" />
+  </list-item>
+  <list-item class="separatorContainerStyle"> </list-item>
+  <list-item class="input-item">
+    <input type="button" value="radio" onclick="changeRadio" class="input-button" />
+  </list-item>
+</list>

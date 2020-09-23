@@ -13,20 +13,21 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 
-<div style="width:454;height:454;left:0;top:0;flex-direction:column;" >
-    <stack style="width:454;height:80;margin-top:80;">
-      <input type="button" style="left:85;width:130;height:60;top:10;" value="首页" onclick=backMain>
-      </input>
-      <input type="button" style="left:235;width:130;height:60;top:10;" value="上一页" onclick=backSuperior>
-      </input>
-    </stack>
-    <canvas ref="canvas{{$item}}" for="{{listData}}" style="margin-left:130;margin-top:10;width:200;height:75;background-color:#ffff00">
-    </canvas>
-    <div style="width:454;height:60;margin-left:160;">
-      <input type="button" style="width:140;height:60;" value="fillRect" onclick=fillRectFunc>
-      </input>
-    </div>
-    <text class="text" style="margin-left:105;">
-      {{text1}}
-    </text>
+<div style="width: 454; height: 454; left: 0; top: 0; flex-direction: column">
+  <stack style="width: 454; height: 80; margin-top: 80">
+    <input type="button" style="left: 85; width: 130; height: 60; top: 10" value="首页" onclick="backMain" />
+    <input type="button" style="left: 235; width: 130; height: 60; top: 10" value="上一页" onclick="backSuperior" />
+  </stack>
+  <canvas
+    ref="canvas{{ $item }}"
+    for="{{ listData }}"
+    style="margin-left: 130; margin-top: 10; width: 200; height: 75; background-color: #ffff00"
+  >
+  </canvas>
+  <div style="width: 454; height: 60; margin-left: 160">
+    <input type="button" style="width: 140; height: 60" value="fillRect" onclick="fillRectFunc" />
+  </div>
+  <text class="text" style="margin-left: 105">
+    {{ text1 }}
+  </text>
 </div>

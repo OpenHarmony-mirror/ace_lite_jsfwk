@@ -12,11 +12,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import {backPage, routePage} from "../../../../common/js/general";
+import { backPage, routePage } from "../../../../common/js/general";
 export default {
-    ...backPage("pages/component/index/containerIndex/index"),
-    changePage1: routePage("pages/component/swiper/indexAttr/index").changePage,
-    changePage2: routePage("pages/component/swiper/indexStyle/index").changePage,
-    changePage3: routePage("pages/component/swiper/indexEvent/index").changePage,
-    changePage4: routePage("pages/component/swiper/indexSpecSet/index").changePage
-}
+  ...backPage("pages/component/index/containerIndex/index"),
+  changePage1: routePage("pages/component/swiper/indexAttr/index").changePage,
+  changePage2: routePage("pages/component/swiper/indexStyle/index").changePage,
+  changePage3: routePage("pages/component/swiper/indexEvent/index").changePage,
+  changePage4: routePage("pages/component/swiper/indexSpecSet/index").changePage
+};
