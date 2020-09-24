@@ -13,10 +13,10 @@
  * limitations under the License.
  */
 export default {
-    onCreate() {
-        console.info('AceApplication onCreate');
-    },
-    onDestroy() {
-        console.info('AceApplication onDestroy');
-    }
-}
+  onCreate() {
+    console.info("Application onCreate");
+  },
+  onDestroy() {
+    console.info("Application onDestroy");
+  }
+};

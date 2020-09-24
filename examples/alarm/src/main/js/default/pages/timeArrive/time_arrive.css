@@ -13,23 +13,21 @@
  * limitations under the License.
  */
 .container {
-    width: 454px;
-    height: 454px;
-    border-radius:227px;
-    border-color:#8b0000;
-    border-width: 1px;
-    flex-direction: column;
-    align-items: center;
+  width: 960px;
+  height: 480px;
+  border-width: 1px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .item {
-    width: 454px;
-    height: 150px;
-    justify-content: center;
-    align-items: center;
+  width: 480px;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
 }
 
 .imgStyle {
-    width: 93px;
-    height: 93px;
+  width: 93px;
+  height: 93px;
 }

@@ -13,118 +13,173 @@
  * limitations under the License.
  */
 import router from "@system.router"
+import app from '@system.app'
 
-module.exports = {
-    data: {
-        time: ["07:20 AM", "07:30 AM", "12:00 AM", "06:00 PM"],
-        repeat: ["Mon Tue Wed Thu Fri", "Mon Tue Wed Thu Fri Sat Sun", "Mon Tue Wed Thu Fri", "Once"],
-        mode: ["addAlarm", "editAlarm", "deleteAlarm", "timeArrive"],
-        switchStatus: [false, false, false, false],
+export default {
+  data: {
+    time: ["07:20 上午", "02:00 下午", "12:00 上午", "12:00 下午"],
+    repeat: ["一 二 三 四 五", "一 二 三 四 五", "日 一 二 三 四 五 六", "不重复"],
+    mode: ["addAlarm", "editAlarm", "deleteAlarm", "timeArrive"],
+    switchStatus: [false, false, false, false],
+    weeks: ["一", "二", "三", "四", "五", "六", "日"],
+    dataWrapper: {
+      mode: "",
+      time: "00:00",
+      repeat: "不重复",
+      alarmItemIndex: -1
+    },
+    originData: [],
+    isDebug: false,
+    curTime: "",
+    curDay: "",
+    interValId: ""
+  },
+  packOriginData() {
+    this.originData = [this.time, this.repeat, this.switchStatus];
+  },
+  unPackOriginData() {
+    this.time = this.originData[0];
+    this.repeat = this.originData[1];
+    var switchStatusIndex = 2;
+    this.switchStatus = this.originData[switchStatusIndex];
+  },
+  onInit() {
+    console.log("[mainPage init]");
+    this.startTimer();
 
-        dataWrapper: {
-            mode: "",
-            time: "00:00",
-            repeat: "Once",
-            alarmItemIndex: -1
-        },
+    if (this.originData.length === 0) { // app first start
+      this.packOriginData();
+    } else {
+      if (this.isDebug) {
+        console.log("[mainPage init] mode: " + this.dataWrapper.mode);
+        console.log("[mainPage init] mode: " + this.dataWrapper.time);
+        console.log("[mainPage init] mode: " + this.dataWrapper.repeat);
+        console.log("[mainPage init] mode: " + this.dataWrapper.alarmItemIndex);
+      }
 
-        originData: [],
-        isDebug: true
-    },
-    packOriginData() {
-        this.originData = [this.time, this.repeat, this.switchStatus];
-    },
-    unPackOriginData() {
-        this.time = this.originData[0];
-        this.repeat = this.originData[1];
-        this.switchStatus = this.originData[2];
-    },
-    onInit() {
-        console.log("[mainPage init]");
-        if (this.originData.length === 0) { // app first start
-            this.packOriginData();
+      this.unPackOriginData(); // apply origin data to current enviroment
+
+      var modeDeleteAlarmIndex = 3;
+      if (this.dataWrapper.mode === this.mode[0] && typeof (this.cancelAlarm) == "undefined") { // add alarm
+        this.time.push(this.transforTimeToTwelvehour(this.dataWrapper.time));
+        this.repeat.push(this.dataWrapper.repeat);
+        this.switchStatus.push(false);
+      } else if (this.dataWrapper.mode === this.mode[1]) { // edit alarm
+        if (typeof (this.deleteAlarm) != "undefined") {
+          this.time.splice(this.dataWrapper.alarmItemIndex, 1);
+          this.repeat.splice(this.dataWrapper.alarmItemIndex, 1);
+          this.switchStatus.splice(this.dataWrapper.alarmItemIndex, 1);
         } else {
-            if (this.isDebug) {
-                console.log("[mainPage init] mode: " + this.dataWrapper.mode);
-                console.log("[mainPage init] mode: " + this.dataWrapper.time);
-                console.log("[mainPage init] mode: " + this.dataWrapper.repeat);
-                console.log("[mainPage init] mode: " + this.dataWrapper.alarmItemIndex);
-            }
-
-            this.unPackOriginData(); // apply origin data to current enviroment
-
-            if (this.dataWrapper.mode === this.mode[0]) { // add alarm
-                this.time.push(this.transforTimeToTwelvehour(this.dataWrapper.time));
-                this.repeat.push(this.dataWrapper.repeat);
-                this.switchStatus.push(false);
-
-            } else if (this.dataWrapper.mode === this.mode[1]) { // edit alarm
-                if (typeof(this.deleteAlarm) != "undefined") {
-                    this.time.splice(this.dataWrapper.alarmItemIndex, 1);
-                    this.repeat.splice(this.dataWrapper.alarmItemIndex, 1);
-                    this.switchStatus.splice(this.dataWrapper.alarmItemIndex, 1);
-                } else {
-                    this.time[this.dataWrapper.alarmItemIndex] = this.transforTimeToTwelvehour(this.dataWrapper.time);
-                    this.repeat[this.dataWrapper.alarmItemIndex] = this.dataWrapper.repeat;
-                    this.switchStatus[this.dataWrapper.alarmItemIndex] = true;
-                }
-
-            } else if (this.dataWrapper.mode === this.mode[3]) { // time arrive
-                var switchValue = this.switchValue;
-                this.switchStatus[this.dataWrapper.switchIndex] = switchValue;
-            }
-
-            this.packOriginData(); // wrap current enviroment data as origin data
+          this.time[this.dataWrapper.alarmItemIndex] = this.transforTimeToTwelvehour(this.dataWrapper.time);
+          this.repeat[this.dataWrapper.alarmItemIndex] = this.dataWrapper.repeat;
+          this.switchStatus[this.dataWrapper.alarmItemIndex] = true;
         }
-    },
-    transforTimeToTwelvehour(time) {
-        var timeArray = time.split(" ")[0].split(":");
-        var hour = timeArray[0];
-        var minute = timeArray[1];
-        if (minute.length === 1) {
-            minute = "0" + minute;
-        }
-        if (Number(hour) >= 12) {
-            hour = Number(hour) - 12;
-            return hour + ":" + minute + " PM";
-        } else {
-            return hour + ":" + minute + " AM";
-        }
-    },
-    addAlarm() {
-        var date = new Date();
-        var strHour = date.getHours();
-        var strMin = date.getMinutes();
-        this.dataWrapper.mode = this.mode[0];
-        this.dataWrapper.time = strHour + ":" + strMin;
-        router.replace({
-            uri: 'pages/timeSelector/time_picker_page',
-            params:{dataWrapper: this.dataWrapper, originData: this.originData}
-        });
-    },
-    switchToEditAlarm(index) {
-        this.dataWrapper.mode = this.mode[1];
-        this.dataWrapper.time = this.time[index];
-        this.dataWrapper.repeat = this.repeat[index];
-        this.dataWrapper.alarmItemIndex = index;
-        router.replace({
-            uri: 'pages/editAlarm/edit_alarm',
-            params:{dataWrapper: this.dataWrapper, originData: this.originData}
-        });
-    },
-    switchChange(index, e) {
-        if (e.checked) {
-            this.dataWrapper.time = this.time[index];
-            this.dataWrapper.mode = this.mode[3];
-            this.dataWrapper.alarmItemIndex = index;
-            var dataWrapper = this.dataWrapper;
-            var oriData = this.originData;
-            setTimeout(function () {
-                router.replace({
-                    uri: 'pages/timeArrive/time_arrive',
-                    params:{dataWrapper: dataWrapper, originData: oriData}
-                });
-            }, 2000);
-        }
+      } else if (this.dataWrapper.mode === this.mode[modeDeleteAlarmIndex]) { // time arrive
+        var switchValue = this.switchValue;
+        this.switchStatus[this.dataWrapper.alarmItemIndex] = switchValue;
+      }
+
+      this.packOriginData(); // wrap current enviroment data as origin data
     }
+  },
+  transforTimeToTwelvehour(time) {
+    var timeArray = time.split(" ")[0].split(":");
+    var hour = timeArray[0];
+    var minute = timeArray[1];
+    if (minute.length === 1) {
+      minute = "0" + minute;
+    }
+    var onTheHour = 12;
+    if (hour == "00") {
+      hour = onTheHour;
+      return hour + ":" + minute + " 上午";
+    }
+    if (Number(hour) == onTheHour) {
+      return hour + ":" + minute + " 下午";
+    }
+    if (Number(hour) > onTheHour) {
+      hour = Number(hour) - onTheHour;
+      return hour + ":" + minute + " 下午";
+    } else {
+      return hour + ":" + minute + " 上午";
+    }
+  },
+  addAlarm() {
+    var date = new Date();
+    var strHour = date.getHours();
+    var strMin = date.getMinutes();
+    this.dataWrapper.mode = this.mode[0];
+    this.dataWrapper.time = strHour + ":" + strMin;
+    router.replace({
+      uri: 'pages/editAlarm/edit_alarm',
+      params: {
+        dataWrapper: this.dataWrapper,
+        originData: this.originData
+      }
+    });
+    clearInterval(this.interValId);
+  },
+  switchToEditAlarm(index) {
+    this.dataWrapper.mode = this.mode[1];
+    this.dataWrapper.time = this.time[index];
+    this.dataWrapper.repeat = this.repeat[index];
+    this.dataWrapper.alarmItemIndex = index;
+    router.replace({
+      uri: 'pages/editAlarm/edit_alarm',
+      params: {
+        dataWrapper: this.dataWrapper,
+        originData: this.originData
+      }
+    });
+    clearInterval(this.interValId);
+  },
+  switchChange(index, e) {
+    if (e.checked) {
+      var modeDeleteAlarmIndex = 3;
+      var countDown = 2000;
+      this.dataWrapper.time = this.time[index];
+      this.dataWrapper.mode = this.mode[modeDeleteAlarmIndex];
+      this.dataWrapper.alarmItemIndex = index;
+      var dataWrapper = this.dataWrapper;
+      var oriData = this.originData;
+      setTimeout(function() {
+        router.replace({
+          uri: 'pages/timeArrive/time_arrive',
+          params: {
+            dataWrapper: dataWrapper,
+            originData: oriData
+          }
+        });
+      }, countDown);
+    }
+    clearInterval(this.interValId);
+  },
+  back() {
+    app.terminate();
+  },
+  setCurTime() {
+    var date = new Date();
+    var strHour = date.getHours() + "";
+    var strMin = date.getMinutes() + "";
+    var strSecond = date.getSeconds() + "";
+    var strDay = date.getDay() + "";
+    if (strHour.length == 1) {
+      strHour = "0" + strHour;
+    }
+    if (strMin.length == 1) {
+      strMin = "0" + strMin;
+    }
+    if (strSecond.length == 1) {
+      strSecond = "0" + strSecond;
+    }
+    this.curTime = strHour + " : " + strMin + " : " + strSecond;
+    this.curDay = "星期" + this.weeks[Number(strDay) - 1];
+  },
+  startTimer: function() {
+    var intervalTime = 1000;
+    this.setCurTime();
+    this.interValId = setInterval(() => {
+      this.setCurTime();
+    }, intervalTime);
+  }
 }

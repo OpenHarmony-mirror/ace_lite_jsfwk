@@ -14,38 +14,63 @@
  */
 import router from "@system.router"
 
-module.exports = {
-    data: {
-        amOrPm: "",
-        dataWrapper: {
-            mode: "",
-            time: "00:00",
-            repeat: "Once",
-            alarmItemIndex: -1
-        },
-        originData: []
+export default {
+  data: {
+    amOrPm: "",
+    dataWrapper: {
+      mode: "",
+      time: "00:00",
+      repeat: "不重复",
+      alarmItemIndex: -1
     },
-    onInit() {
-        this.dataWrapper = this.dataWrapper;
-        if (this.originData.toString() !== "undefined") {
-            this.originData = this.originData;
-        }
-
-        var alarmTime = this.dataWrapper.time;
-        var alarmTimeArray = alarmTime.split(" ");
-        this.dataWrapper.time = alarmTimeArray[0];
-        this.amOrPm = alarmTimeArray[1];
-    },
-    postpone() {
-        router.replace({
-            uri: 'pages/index/index',
-            params:{dataWrapper: this.dataWrapper, switchValue: true, originData: this.originData}
-        });
-    },
-    cancel() {
-        router.replace({
-            uri: 'pages/index/index',
-            params:{dataWrapper: this.dataWrapper, switchValue: false, originData: this.originData}
-        });
+    originData: [],
+    imageFrames: [
+      {
+        src: "/common/A016_017.png"
+      },
+      {
+        src: "/common/A016_018.png"
+      },
+      {
+        src: "/common/A016_019.png"
+      },
+      {
+        src: "/common/A016_020.png"
+      },
+      {
+        src: "/common/A016_021.png"
+      },
+    ]
+  },
+  onInit() {
+    this.dataWrapper = this.dataWrapper;
+    if (this.originData.toString() !== "undefined") {
+      this.originData = this.originData;
     }
+
+    var alarmTime = this.dataWrapper.time;
+    var alarmTimeArray = alarmTime.split(" ");
+    this.dataWrapper.time = alarmTimeArray[0];
+    this.amOrPm = alarmTimeArray[1];
+  },
+  postpone() {
+    router.replace({
+      uri: 'pages/index/index',
+      params: {
+        dataWrapper: this.dataWrapper,
+        switchValue: true,
+        originData: this.originData
+      }
+    });
+  },
+  cancel() {
+    router.replace({
+      uri: 'pages/index/index',
+      params: {
+        dataWrapper: this.dataWrapper,
+        switchValue: false,
+        originData: this.originData
+      }
+    });
+  }
 }

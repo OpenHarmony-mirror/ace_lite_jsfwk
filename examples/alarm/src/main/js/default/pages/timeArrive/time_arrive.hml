@@ -13,18 +13,32 @@
  * limitations under the License.
  */
  -->
-<div class="container" style="left:0px; top:0px">
-    <div class="item" style="flex-direction:column;">
-        <image src="common/alarmClock.png" style="width:50px;height:50px;"></image>
-        <text style="width:100px;height:50px;">Alarm</text>
-    </div>
-    <div class="item">
-        <text style="width:70px;height:50px;font-size:30px">{{amOrPm}}</text>
-        <text style="width:120px;height:120px;font-size:38px">{{dataWrapper.time}}</text>
-    </div>
-    <div class="item">
-        <image src="common/cancel.png" class="imgStyle" onclick="cancel"></image>
-        <div style="width:50px; height:50px;"></div>
-        <image src="common/postpone.png" class="imgStyle" onclick="postpone"></image>
-    </div>
+<div class="container">
+  <div class="item" style="flex-direction: column;">
+    <image-animator
+      images="{{ imageFrames }}"
+      style="width: 50px; height: 50px;"
+      duration="300ms"
+    ></image-animator>
+    <text style="width: 100px; height: 50px; margin-left: 45px;">
+      闹钟
+    </text>
+  </div>
+  <div class="item">
+    <text style="width: 150px; height: 60px; font-size: 48px"
+      >{{ amOrPm }}
+    </text>
+    <text style="width: 230px; height: 120px; font-size: 78px"
+      >{{ dataWrapper.time }}
+    </text>
+  </div>
+  <div class="item">
+    <image src="common/cancel.png" class="imgStyle" onclick="cancel"></image>
+    <div style="width: 50px; height: 50px;"></div>
+    <image
+      src="common/postpone.png"
+      class="imgStyle"
+      onclick="postpone"
+    ></image>
+  </div>
 </div>
