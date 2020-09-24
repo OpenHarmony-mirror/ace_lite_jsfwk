@@ -25,8 +25,8 @@ namespace ACELite {
 const char * const CanvasComponent::DEFAULT_FILLSTYLE = "#000000";
 // default stroke style color=black
 const char * const CanvasComponent::DEFAULT_STROKESTYLE = "#000000";
-// default font size=30px, font family=HYQiHei-65S
-const char * const CanvasComponent::DEFAULT_FONT = "30px HYQiHei-65S";
+// default font size and font family
+const char * const CanvasComponent::DEFAULT_FONT = "30px " DEFAULT_VECTOR_FONT_FILENAME;
 // default text align=left
 const char * const CanvasComponent::DEFAULT_TEXTALIGN = "left";
 
@@ -114,6 +114,11 @@ void CanvasComponent::ReleaseNativeViews()
     ACE_FREE(strokeStyleValue_);
     ACE_FREE(fontValue_);
     ACE_FREE(textAlignValue_);
+    // free fontStyle_.fontName memory which malloc in FontSetter method.
+    if (fontStyle_.fontName != nullptr) {
+        ace_free(const_cast<char *>(fontStyle_.fontName));
+        fontStyle_.fontName = nullptr;
+    }
     if (!IS_UNDEFINED(canvas2dContext_)) {
         bool deleted = jerry_delete_object_native_pointer(canvas2dContext_, nullptr);
         if (!deleted) {
@@ -576,12 +581,6 @@ jerry_value_t CanvasComponent::CanvasFillText(const jerry_value_t func,
     }
 
     component->canvas_->DrawLabel(startPoint, textValue, maxWidth, component->fontStyle_, component->paint_);
-
-    // free component->fontStyle_.fontName memory which malloc in FontSetter method.
-    if (component->fontStyle_.fontName != nullptr) {
-        ace_free(const_cast<char *>(component->fontStyle_.fontName));
-        component->fontStyle_.fontName = nullptr;
-    }
 
     ACE_FREE(textValue);
     return UNDEFINED;
