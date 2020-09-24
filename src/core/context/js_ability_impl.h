@@ -37,8 +37,8 @@ public:
      */
     JSAbilityImpl()
         : appContext_(nullptr),
-          abilityModel_(UNDEFINED),
-          nativeElement_(UNDEFINED),
+          abilityModel_(0),
+          nativeElement_(0),
           rendered_(false),
           isEnvInit_(false),
           router_(nullptr)

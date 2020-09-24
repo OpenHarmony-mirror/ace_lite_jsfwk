@@ -57,6 +57,22 @@
  * support sensor API for JS
  */
 #define FEATURE_MODULE_SENSOR
+
+/**
+ * support brightness API for JS
+ */
+#define FEATURE_MODULE_BRIGHTNESS
+
+/**
+ * support battery API for JS
+ */
+#define FEATURE_MODULE_BATTERY
+
+/**
+ * support configuration API for JS
+ */
+#define FEATURE_MODULE_CONFIGURATION
+
 /**
  * timer module
  */
@@ -71,11 +87,6 @@
  * localization module
  */
 #define FEATURE_LOCALIZATION_MODULE
-
-/**
- * support config for product JS modules
- */
-#define FEATURE_PRODUCT_MODULE
 
 /**
  * module require test
