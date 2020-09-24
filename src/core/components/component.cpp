@@ -300,8 +300,9 @@ bool Component::RefreshRect() const
     // set view height and width
     uint8_t borderNum = 2;
     if (height_ >= 0) {
-        if ((uiView->GetStyle(STYLE_BORDER_WIDTH) < 0) || (uiView->GetStyle(STYLE_PADDING_TOP) < 0) ||
-            (uiView->GetStyle(STYLE_PADDING_BOTTOM) < 0)) {
+        // as uiView->GetStyle(STYLE_PADDING_TOP) and uiView->GetStyle(STYLE_PADDING_BOTTOM) is defined
+        // as uint16_t, so do not need to judge whether less than 0
+        if (uiView->GetStyle(STYLE_BORDER_WIDTH) < 0) {
             HILOG_WARN(HILOG_MODULE_ACE, "border and padding size should not less than 0");
         }
         int16_t contentHeight = height_ - (uiView->GetStyle(STYLE_BORDER_WIDTH) * borderNum) -
@@ -318,8 +319,7 @@ bool Component::RefreshRect() const
         }
     }
     if (width_ >= 0) {
-        if ((uiView->GetStyle(STYLE_BORDER_WIDTH) < 0) || (uiView->GetStyle(STYLE_PADDING_LEFT) < 0) ||
-            (uiView->GetStyle(STYLE_PADDING_RIGHT) < 0)) {
+        if (uiView->GetStyle(STYLE_BORDER_WIDTH) < 0) {
             HILOG_WARN(HILOG_MODULE_ACE, "border and padding size should not less than 0");
         }
         int16_t contentWidth = width_ - (uiView->GetStyle(STYLE_BORDER_WIDTH) * borderNum) -
@@ -848,7 +848,8 @@ int32_t Component::GetAnimatorValue(char *animatorValue, const int8_t index, boo
         return 0;
     }
 
-    long convertedValue = isOpacity ? (strtod(value, nullptr) * ALPHA_MAX) : strtol(value, nullptr, DEC);
+    long convertedValue = isOpacity ? (long)((strtod(value, nullptr) * ALPHA_MAX)) :
+                                      strtol(value, nullptr, DEC);
     if (TransitionImpl::IsEndWith(value, "rad")) {
         uint8_t degConversionRate = 57;
         convertedValue = convertedValue * degConversionRate;

@@ -111,10 +111,8 @@ void TransitionImpl::InitTransitionParamsStyle()
         params_.opacity_to = (params_.opacity_to <= OPA_OPAQUE) ? params_.opacity_to : OPA_OPAQUE;
     }
 
-    const uint32_t rgbValueMin = 0x000000;
     const uint32_t rgbValueMax = 0xFFFFFF;
-    if ((params_.background_color_from >= rgbValueMin) && (params_.background_color_from <= rgbValueMax) &&
-        (params_.background_color_to >= rgbValueMin) && (params_.background_color_to <= rgbValueMax)) {
+    if ((params_.background_color_from <= rgbValueMax) && (params_.background_color_to <= rgbValueMax)) {
         isTransitionSet_[GeneralType::IS_BACKGROUND_COLOR_TRANSITION_SET] = true;
         GetRGB(params_.background_color_from, rSrc_, gSrc_, bSrc_);
         GetRGB(params_.background_color_to, rTo_, gTo_, bTo_);
