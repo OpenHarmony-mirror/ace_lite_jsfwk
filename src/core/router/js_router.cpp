@@ -16,6 +16,9 @@
 #include "js_router.h"
 
 #include "ace_log.h"
+#ifdef OHOS_ACELITE_PRODUCT_WATCH
+#include "dft_impl.h"
+#endif
 #include "js_async_work.h"
 #include "js_page_state_machine.h"
 #include "js_profiler.h"
@@ -95,6 +98,9 @@ void Router::ReplaceSync()
         // above call will move sm into ready state, than let the page show
         currentSm_->ChangeState(SHOW_STATE);
     }
+#ifdef OHOS_ACELITE_PRODUCT_WATCH
+    DftImpl::GetInstance()->CallbackPageReplaced(currentSm_->GetCurrentState());
+#endif
     STOP_TRACING();
 }
 

@@ -164,7 +164,6 @@ bool StateMachine::Init(jerry_value_t object, jerry_value_t &jsRes)
     }
     // create new references to object's value,otherwise jerry engine will crash.
     object_ = jerry_acquire_value(object);
-    appContext_->SetCurrentJsPath(jsPagePath_);
     stateMap_[INIT_STATE] = new PageInitState();
     stateMap_[READY_STATE] = new PageReadyState();
     stateMap_[SHOW_STATE] = new PageShowState();
@@ -217,6 +216,7 @@ bool StateMachine::BindUri(jerry_value_t &jsRes)
     }
     // check5:object's uri is not existed, need to move
     char *fullPath = RelocateJSSourceFilePath(appRootPath_, jsPagePath_);
+    appContext_->SetCurrentJsPath(jsPagePath_);
     if (GetFileSize(fullPath) == 0) {
         ACE_FREE(fullPath);
         ace_free(uri_);

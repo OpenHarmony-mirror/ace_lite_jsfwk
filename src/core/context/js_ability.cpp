@@ -19,6 +19,9 @@
 #include "ace_event_error_code.h"
 #include "ace_log.h"
 #include "acelite_config.h"
+#ifdef OHOS_ACELITE_PRODUCT_WATCH
+#include "dft_impl.h"
+#endif // OHOS_ACELITE_PRODUCT_WATCH
 #include "fatal_handler.h"
 #include "js_ability_impl.h"
 #include "js_profiler.h"
@@ -121,6 +124,9 @@ void JSAbility::TransferToDestroy()
     // this situation might happen if the destroy function is called outside of JS thread, such as AMS.
     FatalHandler::GetInstance().ResetRendering();
     FatalHandler::GetInstance().SetExitingFlag(false);
+#ifdef OHOS_ACELITE_PRODUCT_WATCH
+    DftImpl::GetInstance()->RegisterPageReplaced(nullptr);
+#endif // OHOS_ACELITE_PRODUCT_WATCH
     DumpNativeMemoryUsage();
 }
 
