@@ -29,8 +29,8 @@ export default {
   fillTextFunc: function() {
     var canvasRef = this.$refs.canvas3;
     var ctx = canvasRef.getContext("2d");
-    ctx.font = "30px HYQiHei-65S";
-    ctx.fillText("Hello ACE", 10, 50);
+    ctx.font = "30px SourceHanSansSC-Regular";
+    ctx.fillText("Hello JS", 10, 50);
   },
   arcFunc: function() {
     var canvasRef = this.$refs.canvas4;

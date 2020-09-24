@@ -79,13 +79,14 @@ export default {
     var getFont2 = ctx.font; // 再次getter默认font
     console.info("getFont2=" + getFont2);
 
-    ctx.font = "  30px HYQiHei-65S two    three f "; // setter
+    ctx.font = "  30px SourceHanSansSC-Regular two    three f "; // setter
     //ctx.font = "  "; // setter
 
     var getFont3 = ctx.font; // setter后getter font
     console.info("getFont3=" + getFont3);
 
-    ctx.fillText("Hello ACE", 10, 50);
+    ctx.fillText("Hello JS", 10, 20);
+    ctx.fillText("JS Hello", 10, 70);
   },
   textAlignFunc: function() {
     var canvasRef = this.$refs.canvas5;
@@ -97,7 +98,7 @@ export default {
     var getTextAlign2 = ctx.textAlign; // 再次getter默认text align
     console.info("getTextAlign2=" + getTextAlign2);
 
-    ctx.font = "30px HYQiHei-65S";
+    ctx.font = "30px SourceHanSansSC-Regular";
     ctx.textAlign = "left"; // setter
     ctx.fillText("left", 110, 10);
     ctx.textAlign = "right"; // setter
