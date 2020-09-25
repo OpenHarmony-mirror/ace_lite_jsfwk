@@ -14,63 +14,64 @@
  * limitations under the License.
  */
  -->
-<div class="container" style="left:0px; top:0px; border-radius:227px; border-color:#8b0000; border-width: 1px">
-        <list style="left:0px; top:0px; height: 454px;" class="itemWidth">
-            <list-item type="listItem" style="width: 314px; height:150px;">
-                <div style="justify-content:center; align-items:center;width:390px" class="itemDiv">
-                    <text class="textLarger" style="width:210px">Edit alarm</text>
-                </div>
-            </list-item>
-            <list-item type="listItem" style="width: 419px; height: 150px;">
-                <div style="width: 35px; height:150px;"></div>
-                <div class="itemDiv">
-                    <div class="itemLeft" onclick="switchToTimePicker">
-                        <div class="textLargeDiv" style="width: 120px">
-                            <text class="textLarger" style="width:120px;">{{dataWrapper.time}}</text>
-                        </div>
-                        <div class="textMiniDiv" style="width:85px;">
-                            <text class="textStandard" style="width:85px">Time</text>
-                        </div>
-                    </div>
-                </div>
-                <image src="common/jiantou.png" style="width: 70px; height:150px;"></image>
-            </list-item>
-            <list-item type="listItem" style="width: 419px; height: 200px;">
-                <div style="width: 35px; height:150px;"></div>
-                <div class="itemDiv" style="height:200px">
-                    <div class="itemLeft" onclick="switchToWeekSelector" style="height:200px">
-                        <div class="textLargeDiv" style="width:330px;height:140px;
-                        flex-direction:column;">
-                            <text class="textLarger" style="height:140px;width:330px;text-overflow:ellipsis">{{dataWrapper.repeat}}</text>
-                        </div>
-                        <div class="textMiniDiv" style="width:120px;">
-                            <text class="textStandard" style="width:120px;">Repeat</text>
-                        </div>
-                    </div>
-                </div>
-                <image src="common/jiantou.png" style="width: 70px; height:150px;"></image>
-            </list-item>
-            <list-item type="listItem" style="width: 314px; height: 150px;">
-                <div class="itemDiv" style="width: 390px">
-                    <div class="itemLeft" style="width: 390px">
-                        <div class="textLargeDiv" style="width:120px;">
-                            <text class="textLarger" style="width:120px;">Alarm</text>
-                        </div>
-                        <div class="textMiniDiv" style="width:90px;">
-                            <text class="textStandard" style="width:90px;">Name</text>
-                        </div>
-                    </div>
-                </div>
-            </list-item>
-            <list-item type="listItem" style="width: 419px; height: 150px;">
-                <div style="width:419px; height:150px; flex-direction:column; align-items:center;">
-                    <div style="width:419px; height:60px;"></div>
-                    <div style="width:419px; height:90px; justify-content:center; align-items:center; border-radius:227px;">
-                        <text style="color:#0000ff; font-size: 30px; width:70px; height:50px" onclick="submit">OK</text>
-                        <div style="width:30px; height:50px;"></div>
-                        <text style="color:#b22222; font-size: 30px; width:105px; height:50px" onclick="remove">Delete</text>
-                    </div>
-                </div>
-            </list-item>
-        </list>
+<div class="container">
+  <div class="container-left">
+    <div class="container-title">
+      <div style="width: 280px; height: 80px; align-items: center; margin-left: 39px;" onclick="back">
+        <image src="common/back.png" class="back-img"></image>
+        <text style="font-size: 38px; margin-left: 27px;">
+          编辑闹钟
+        </text>
+      </div>
     </div>
+    <div class="container-content" style="margin-left: 80px; margin-top: 45px; align-items: center;">
+      <picker-view type="time" selected="{{dataWrapper.time}}" style="width: 250px; height: 160px;
+        font-size: 30px; selected-font-size: 42px; margin-left: 100px;" onchange="getSelectedTime"></picker-view>
+    </div>
+    <input type="button" class="button" style="margin-top: 40px; margin-left: 160px; color: #E42B2B;"
+        value="{{buttonInfo}}" onclick="remove"></input>
+  </div>
+  <div class="container-right">
+    <div class="container-title"></div>
+    <div class="container-content" style="width:470px; margin-left:10px; margin-top: 45px; border-width: 5px; flex-direction: column;">
+      <div class="divWeek">
+        <stack style="width: 400px; height: 150px;">
+          <image src="{{weekImgSrcList[0]}}" class="imgWeek" style="left: 60px; top: 35px"></image>
+          <text style="font-size: 38px; left: 80px; top: 45px" onclick="changeWeekSelected(0)">
+            日
+          </text>
+          <image src="{{weekImgSrcList[1]}}" class="imgWeek" style="left: 160px; top: 35px"></image>
+          <text style="font-size: 38px; left: 180px; top: 45px" onclick="changeWeekSelected(1)">
+            一
+          </text>
+          <image src="{{weekImgSrcList[2]}}" class="imgWeek" style="left: 260px; top: 35px"></image>
+          <text style="font-size: 38px; left: 280px; top: 45px" onclick="changeWeekSelected(2)">
+            二
+          </text>
+        </stack>
+      </div>
+      <div class="divWeek">
+        <stack style="width: 420px; height: 150px;">
+          <image src="{{weekImgSrcList[3]}}" class="imgWeek" style="left: 30px; top: 35px"></image>
+          <text style="font-size: 38px; left: 50px; top: 45px" onclick="changeWeekSelected(3)">
+            三
+          </text>
+          <image src="{{weekImgSrcList[4]}}" class="imgWeek" style="left: 130px; top: 35px"></image>
+          <text style="font-size: 38px; left: 150px; top: 45px" onclick="changeWeekSelected(4)">
+            四
+          </text>
+          <image src="{{weekImgSrcList[5]}}" class="imgWeek" style="left: 230px; top: 35px"></image>
+          <text style="font-size: 38px; left: 250px; top: 45px" onclick="changeWeekSelected(5)">
+            五
+          </text>
+          <image src="{{weekImgSrcList[6]}}" class="imgWeek" style="left: 330px; top: 35px"></image>
+          <text style="font-size: 38px; left: 350px; top: 45px" onclick="changeWeekSelected(6)">
+            六
+          </text>
+        </stack>
+      </div>
+    </div>
+    <input type="button" class="button" style="margin-top: 40px; margin-left: 80px;" value="确认"
+      onclick="submit"/>
+  </div>
+</div>
