@@ -190,7 +190,7 @@ int16_t IntegerOf(jerry_value_t source)
         ace_free(strValue);
         return intValue;
     }
-    int number = jerry_get_number_value(source);
+    int number = (int)jerry_get_number_value(source);
     if (number >= INT16_MAX) {
         HILOG_DEBUG(HILOG_MODULE_ACE, "js number value is out of range.");
         return INT16_MAX;
@@ -1068,7 +1068,7 @@ bool ParseRgbaColor(const char * const source, uint32_t &color, uint8_t &alpha)
         move -= BITS_PER_BYTE;
     }
     if (token != nullptr) {
-        alpha = strtod(token, nullptr) * ALPHA_MAX;
+        alpha = (uint8_t)(strtod(token, nullptr) * ALPHA_MAX);
     } else {
         alpha = ALPHA_MAX;
     }

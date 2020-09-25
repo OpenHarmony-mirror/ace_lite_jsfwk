@@ -97,7 +97,7 @@ jerry_value_t TimerModule::StartTask(TimerList::Arguments *arguments, jerry_valu
         Task(arguments);
     } else {
         jerry_value_t numProp = jerry_value_to_number(time);
-        int64_t num = jerry_get_number_value(numProp);
+        int64_t num = (int64_t)(jerry_get_number_value(numProp));
         jerry_release_value(numProp);
         if (num <= 0 || num >= UINT32_MAX) {
             retVal = timerList->AddTimer(timerId, arguments);
