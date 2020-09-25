@@ -199,7 +199,7 @@ jerry_value_t FeatureAbilityModule::UnsubscribeMessage(const jerry_value_t func,
     return UNDEFINED;
 }
 
-int32_t FeatureAbilityModule::MessageSuccessCallback(void *data)
+int32_t FeatureAbilityModule::MessageSuccessCallback(const void *data)
 {
     if (FatalHandler::GetInstance().IsFatalErrorHitted()) {
         HILOG_ERROR(HILOG_MODULE_ACE, "drop message as handling fatal error");
@@ -210,7 +210,7 @@ int32_t FeatureAbilityModule::MessageSuccessCallback(void *data)
         return -1;
     } else {
         ACE_FEATURE_EVENT_PRINT(MT_ACE_FEATUREABILITY, MT_ACE_FEATUREABILITY_SUBSCRIBEMSG, 0);
-        FeatureAbilityDataInfo *origin = static_cast<FeatureAbilityDataInfo *>(data);
+        const FeatureAbilityDataInfo *origin = static_cast<const FeatureAbilityDataInfo *>(data);
         FeatureAbilityDataInfo *target =
             static_cast<FeatureAbilityDataInfo *>(ace_malloc(sizeof(FeatureAbilityDataInfo)));
         if (target == nullptr) {
@@ -242,7 +242,7 @@ int32_t FeatureAbilityModule::MessageSuccessCallback(void *data)
 
     return 0;
 }
-void FeatureAbilityModule::CopySuccessMessage(FeatureAbilityDataInfo *origin, FeatureAbilityDataInfo *&target)
+void FeatureAbilityModule::CopySuccessMessage(const FeatureAbilityDataInfo *origin, FeatureAbilityDataInfo *&target)
 {
     size_t bufSize = 0;
     if (origin->deviceID != nullptr) {
@@ -297,7 +297,7 @@ void FeatureAbilityModule::CopySuccessMessage(FeatureAbilityDataInfo *origin, Fe
         }
     }
 }
-int32_t FeatureAbilityModule::MessageFailCallback(void *data, uint16_t dataLength, uint16_t errorCode)
+int32_t FeatureAbilityModule::MessageFailCallback(const void *data, uint16_t dataLength, uint16_t errorCode)
 {
     if (FatalHandler::GetInstance().IsFatalErrorHitted()) {
         HILOG_ERROR(HILOG_MODULE_ACE, "drop message as handling fatal error");

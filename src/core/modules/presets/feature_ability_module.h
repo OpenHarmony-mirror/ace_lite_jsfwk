@@ -107,11 +107,11 @@ private:
                                     const uint16_t errCode,
                                     bool success);
 
-    static int32_t MessageSuccessCallback(void *data);
+    static int32_t MessageSuccessCallback(const void *data);
 
-    static void CopySuccessMessage(FeatureAbilityDataInfo *origin, FeatureAbilityDataInfo *&target);
+    static void CopySuccessMessage(const FeatureAbilityDataInfo *origin, FeatureAbilityDataInfo *&target);
 
-    static int32_t MessageFailCallback(void *data, uint16_t dataLength, uint16_t errorCode);
+    static int32_t MessageFailCallback(const void *data, uint16_t dataLength, uint16_t errorCode);
 
     static void AsyncSuccessCallback(void *data);
 

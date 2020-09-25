@@ -26,7 +26,6 @@
 #if ENABLED(SECURE_C_FUNCTION)
 #include "securec.h"
 #endif
-#include "ui_text_language.h"
 #include <string.h>
 
 namespace OHOS {
@@ -181,7 +180,7 @@ bool CJSONParser::ReadFile(ListNode *&languageFile, ListNode *&countryFile)
 #ifdef LOCALIZATION_PLURAL
 char *CJSONParser::FillPlaceholder(char *format, jerry_value_t arg, jerry_length_t num, bool isPlural)
 #else
-char *CJSONParser::FillPlaceholder(char *format, jerry_value_t arg, jerry_length_t num)
+char *CJSONParser::FillPlaceholder(const char *format, jerry_value_t arg, jerry_length_t num)
 #endif // LOCALIZATION_PLURAL
 {
     if (format == nullptr) {
@@ -213,9 +212,9 @@ char *CJSONParser::FillPlaceholder(char *format, jerry_value_t arg, jerry_length
 }
 
 #ifdef LOCALIZATION_PLURAL
-uint8_t CJSONParser::FormatString(char *format, jerry_value_t arg, ListNode *&values, bool isPlural, jerry_length_t num)
+uint8_t CJSONParser::FormatString(const char *format, jerry_value_t arg, ListNode *&values, bool isPlural, jerry_length_t num)
 #else
-uint8_t CJSONParser::FormatString(char *format, jerry_value_t arg, ListNode *&values, jerry_length_t num)
+uint8_t CJSONParser::FormatString(const char *format, jerry_value_t arg, ListNode *&values, jerry_length_t num)
 #endif
 {
     uint8_t length = 0;
@@ -605,9 +604,9 @@ int CJSONParser::IndexOf(const char *string, char delemeter, int index)
 }
 
 #ifdef LOCALIZATION_PLURAL
-char *CJSONParser::GetParamValue(char *attrName, jerry_value_t param, bool isPlural)
+char *CJSONParser::GetParamValue(const char *attrName, jerry_value_t param, bool isPlural)
 #else
-char *CJSONParser::GetParamValue(char *attrName, jerry_value_t param)
+char *CJSONParser::GetParamValue(const char *attrName, jerry_value_t param)
 {
     char *contentValue = nullptr; // store the value defined in param
     uint16_t contentLen = 0;
@@ -616,7 +615,7 @@ char *CJSONParser::GetParamValue(char *attrName, jerry_value_t param)
         contentValue = MallocStringOf(param, &contentLen);
     }
 #else
-    jerry_value_t propName = jerry_create_string(reinterpret_cast<jerry_char_t *>(attrName));
+    jerry_value_t propName = jerry_create_string(reinterpret_cast<jerry_char_t const *>(attrName));
     if (JerryHasProperty(param, propName)) { // get the placehoder {...} value defined in param
         jerry_value_t paramValue = jerry_get_property(param, propName);
         // the contentValue would be released in clearNode values

@@ -61,7 +61,7 @@ public:
 #ifdef LOCALIZATION_PLURAL
     char *FillPlaceholder(char *format, jerry_value_t arg, jerry_length_t num, bool isPlural);
 #else
-    char *FillPlaceholder(char *format, jerry_value_t arg, jerry_length_t num);
+    char *FillPlaceholder(const char *format, jerry_value_t arg, jerry_length_t num);
 #endif // LOCALIZATION_PLURAL
 
     /**
@@ -152,17 +152,17 @@ private:
      */
 #ifdef LOCALIZATION_PLURAL
     char *GetPluralValue(char *value, jerry_value_t param);
-    uint8_t FormatString(char *format, jerry_value_t arg, ListNode *&node, bool isPlural, jerry_value_t num);
+    uint8_t FormatString(const char *format, jerry_value_t arg, ListNode *&node, bool isPlural, jerry_value_t num);
     /**
      * @brief: get the value defined in param
      * @param: attrName:the attrbute name in param, for example "name"
      *         param: the object defined attrName, for example {"name":"Jane"}
      * @return: the value in param
      */
-    char *GetParamValue(char *attrName, jerry_value_t param, bool isPlural);
+    char *GetParamValue(const char *attrName, jerry_value_t param, bool isPlural);
 #else
-    uint8_t FormatString(char *format, jerry_value_t arg, ListNode *&node, jerry_value_t num);
-    char *GetParamValue(char *attrName, jerry_value_t param);
+    uint8_t FormatString(const char *format, jerry_value_t arg, ListNode *&node, jerry_value_t num);
+    char *GetParamValue(const char *attrName, jerry_value_t param);
 #endif
 
     /**
