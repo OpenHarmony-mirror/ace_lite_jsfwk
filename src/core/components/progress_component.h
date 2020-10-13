@@ -24,6 +24,8 @@ namespace OHOS {
 namespace ACELite {
 enum ProgressType { ARC = 0x01, HORIZONTAL = 0x02 };
 
+constexpr int16_t DEFAULT_START_ANGLE = 240;
+constexpr int16_t DEFAULT_TOTAL_ANGLE = 240;
 constexpr int16_t DEFAULT_STROKE_WIDTH = 32;
 
 class ProgressComponent final : public Component {
@@ -45,7 +47,7 @@ protected:
 private:
     ProgressType GetType() const;
     char* GetStringAttrByName(const char * const name, uint16_t* len) const;
-    void SetAngles() const;
+    void SetAngles();
     void HorizonProgressPostDeal() const;
     bool SetArcProgressStyle(const AppStyleItem* style);
     bool SetHorizonProgressStyle(const AppStyleItem* style);
@@ -53,6 +55,9 @@ private:
     UIAbstractProgress* progressView_;
     ProgressType type_;
     int16_t hStrokeWidth_;
+    int16_t centerX_;
+    int16_t centerY_;
+    int16_t radius_;
     int16_t startAngle_;
     int16_t totalAngle_;
 };
