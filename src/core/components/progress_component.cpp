@@ -327,9 +327,7 @@ void ProgressComponent::PostUpdate(uint16_t attrKeyId, bool updateResult)
     if (type_ == HORIZONTAL) {
         HorizonProgressPostDeal();
     } else if (type_ == ARC) {
-        if ((attrKeyId == K_DIRECTION) || (attrKeyId == K_START_ANGLE) || (attrKeyId == K_TOTAL_ANGLE)) {
-            SetAngles();
-        }
+        SetAngles();
     } else {
         // Do nothing
     }
