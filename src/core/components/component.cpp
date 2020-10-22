@@ -188,6 +188,8 @@ bool Component::UpdateView(uint16_t attrKeyId, jerry_value_t attrValue)
     START_TRACING_WITH_EXTRA_INFO(SET_ATTR_SET_TO_NATIVE, componentName_, attrKeyId);
     PreUpdate();
 
+    // check if need to invalided self before changing in case component's area will be changed
+    InvalidateIfNeeded(attrKeyId, true);
     bool updateResult = SetAttribute(attrKeyId, attrValue);
     if (!updateResult) {
         AppStyleItem *styleItem = AppStyleItem::CreateStyleItem(attrKeyId, attrValue);
@@ -199,7 +201,8 @@ bool Component::UpdateView(uint16_t attrKeyId, jerry_value_t attrValue)
     }
 
     RefreshRect();
-    ReLayoutChildrenIfNeeded(attrKeyId);
+    // force parent to relayout the children in case component's area is changed
+    InvalidateIfNeeded(attrKeyId, false);
 
     PostUpdate(attrKeyId, updateResult);
     StartAnimation();
@@ -1111,7 +1114,7 @@ void Component::AppendDescriptorOrElements(UIViewGroup *viewGroup, const JSValue
     }
 }
 
-void Component::ReLayoutChildrenIfNeeded(uint16_t attrKeyId) const
+void Component::InvalidateIfNeeded(uint16_t attrKeyId, bool invalidateSelf) const
 {
     UIView *uiView = GetComponentRootView();
     if ((uiView == nullptr) || !KeyParser::IsKeyValid(attrKeyId)) {
@@ -1124,10 +1127,13 @@ void Component::ReLayoutChildrenIfNeeded(uint16_t attrKeyId) const
         attrKeyId == K_PADDING_RIGHT || attrKeyId == K_PADDING_TOP || attrKeyId == K_BORDER_BOTTOM_WIDTH ||
         attrKeyId == K_BORDER_LEFT_WIDTH || attrKeyId == K_BORDER_RIGHT_WIDTH || attrKeyId == K_BORDER_TOP_WIDTH ||
         attrKeyId == K_BORDER_WIDTH || attrKeyId == K_BORDER_RADIUS || attrKeyId == K_LEFT || attrKeyId == K_TOP) {
+        if (invalidateSelf) {
+            uiView->Invalidate();
+            return;
+        }
         UIView *parent = uiView->GetParent();
         if (parent != nullptr) {
-            parent->LayoutChildren();
-            parent->Invalidate();
+            parent->LayoutChildren(true);
         }
     }
 }

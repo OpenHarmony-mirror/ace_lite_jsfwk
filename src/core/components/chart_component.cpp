@@ -417,6 +417,7 @@ void ChartComponent::AppendValues(UIChartDataSerial& dataserial, Point* pointArr
         }
         // Get the data set beyond the screen, and replace the existing data in the sequence one by one
         // from the beginning
+        chartView_->RefreshChart();
         for (uint16_t i = 0; i < (expectedDatasLen - (xMaxValue_ + 1)); i++) {
             if (((xMaxValue_ - latestIndex) + i) >= dataLen) {
                 HILOG_ERROR(HILOG_MODULE_ACE, "append data error2");
@@ -424,7 +425,7 @@ void ChartComponent::AppendValues(UIChartDataSerial& dataserial, Point* pointArr
             }
             pointArray[(xMaxValue_ - latestIndex) + i].x = i;
             dataserial.ModifyPoint(i, pointArray[(xMaxValue_ - latestIndex) + i]);
-            dataserial.HidePoint(i + latestIndex + 1, seriesOptions_->margin);
+            dataserial.HidePoint(i, seriesOptions_->margin);
         }
     } else { // after adding data, the length will not exceed the maximum value of the x axis
         if (latestIndex < existingDataLen - 1) {

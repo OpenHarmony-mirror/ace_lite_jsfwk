@@ -220,8 +220,7 @@ void TextComponent::PostUpdate(uint16_t attrKeyId, bool updateResult)
     }
     UIView *parent = uiLabel_->GetParent();
     if (parent != nullptr) {
-        parent->LayoutChildren();
-        parent->Invalidate();
+        parent->LayoutChildren(true);
     }
 }
 
